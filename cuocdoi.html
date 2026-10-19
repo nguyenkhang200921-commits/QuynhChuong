@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cuộc đời và bối cảnh lịch sử của Ngô Quyền</title>
+
+    <!-- Su dung CSS chung cua website -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- CSS bo sung rieng cho trang Cuoc doi -->
+    <style>
+        .life-banner {
+            max-width: 1100px;
+            margin: 35px auto;
+            padding: 40px 25px;
+            text-align: center;
+            color: #fff2d3;
+            background: linear-gradient(130deg, #501116, #8b2a25, #501116);
+            border: 2px solid #d6b05c;
+            border-radius: 16px;
+            box-shadow: 0 8px 20px rgba(62, 17, 20, 0.15);
+        }
+
+        .life-banner h2 {
+            color: #f3d27b;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(25px, 4vw, 36px);
+            margin-bottom: 15px;
+        }
+
+        .life-banner p {
+            font-size: 18px;
+            max-width: 750px;
+            margin: auto;
+        }
+
+        .life-section {
+            background: rgba(255, 250, 235, 0.94);
+            border: 1px solid #dec58e;
+            border-radius: 13px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 5px 16px rgba(65, 35, 15, 0.08);
+        }
+
+        .life-section h3 {
+            color: #741c25;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 23px;
+            border-bottom: 2px solid #dfbd6a;
+            padding-bottom: 10px;
+            margin-bottom: 18px;
+        }
+
+        .life-section p {
+            margin-bottom: 14px;
+            text-align: justify;
+        }
+
+        .life-info {
+            background: #f8edcf;
+            padding: 17px 20px;
+            border-left: 5px solid #9b3027;
+            border-radius: 6px;
+            margin: 18px 0;
+        }
+
+        .life-info p {
+            margin-bottom: 6px;
+            text-align: left;
+        }
+
+        .life-info p:last-child {
+            margin-bottom: 0;
+        }
+
+        .life-image {
+            text-align: center;
+            margin: 25px 0 10px;
+        }
+
+        .life-image img {
+            display: block;
+            width: 100%;
+            max-width: 620px;
+            max-height: 390px;
+            object-fit: contain;
+            margin: auto;
+            padding: 5px;
+            background: #fff9e9;
+            border: 3px solid #c9a44c;
+            border-radius: 12px;
+            box-shadow: 0 5px 14px rgba(74, 36, 28, 0.15);
+        }
+
+        .life-image figcaption {
+            color: #795522;
+            font-size: 13px;
+            font-style: italic;
+            margin-top: 10px;
+        }
+
+        .life-timeline {
+            border-left: 3px solid #c9a04e;
+            padding-left: 22px;
+            margin: 20px 0 10px 8px;
+        }
+
+        .life-event {
+            position: relative;
+            margin-bottom: 22px;
+        }
+
+        .life-event:last-child {
+            margin-bottom: 0;
+        }
+
+        .life-event::before {
+            content: "";
+            position: absolute;
+            left: -31px;
+            top: 5px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #8b2925;
+            border: 3px solid #e6c16f;
+        }
+
+        .life-event h4 {
+            color: #84242a;
+            margin-bottom: 6px;
+        }
+
+        .life-event p {
+            margin-bottom: 0;
+        }
+
+        .life-quote {
+            padding: 22px;
+            background: linear-gradient(120deg, #f2d99e, #fff6dd);
+            border-left: 5px solid #8b2925;
+            border-radius: 8px;
+            text-align: center;
+            color: #57201b;
+            font-family: Georgia, "Times New Roman", serif;
+            font-style: italic;
+            margin-top: 20px;
+        }
+
+        .source-list li {
+            margin: 12px 0;
+            overflow-wrap: anywhere;
+        }
+
+        .source-list a {
+            color: #81242b;
+            font-weight: bold;
+        }
+
+        .source-list a:hover {
+            color: #a77c2d;
+        }
+
+        .page-navigation {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin: 30px 0;
+        }
+
+        .page-navigation a {
+            display: inline-block;
+            padding: 11px 18px;
+            color: #fff0cb;
+            background: #641923;
+            border: 1px solid #c9a44c;
+            border-radius: 25px;
+            text-decoration: none;
+            transition: 0.25s;
+        }
+
+        .page-navigation a:hover {
+            color: #351014;
+            background: #e8c66f;
+        }
+
+        @media (max-width: 600px) {
+            .life-banner {
+                margin: 22px 13px;
+                padding: 28px 18px;
+            }
+
+            .life-banner p {
+                font-size: 16px;
+            }
+
+            .life-section {
+                padding: 18px;
+            }
+
+            .life-section h3 {
+                font-size: 20px;
+            }
+
+            .page-navigation {
+                flex-direction: column;
+            }
+
+            .page-navigation a {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- PHAN DAU TRANG -->
+    <header class="hero">
+        <div class="hero-content">
+
+            <p class="eyebrow">HÀO KHÍ LỊCH SỬ VIỆT NAM</p>
+
+            <h1>NGÔ QUYỀN</h1>
+
+            <h2>Cuộc đời và bối cảnh lịch sử</h2>
+
+            <p class="hero-description">
+                Tìm hiểu quê hương, quá trình trưởng thành
+                và hoàn cảnh lịch sử đã gắn liền với sự nghiệp
+                của người lãnh đạo chiến thắng Bạch Đằng năm 938.
+            </p>
+
+        </div>
+    </header>
+
+
+    <!-- MENU CHUNG GOM 8 TRANG -->
+    <nav class="navbar">
+
+        <a href="index.html">Trang chủ</a>
+
+        <a href="cuocdoi.html" class="active">Cuộc đời</a>
+
+        <a href="hanhtrinh.html">Hành trình</a>
+
+        <a href="thanhtuu.html">Thành tựu</a>
+
+        <a href="thuthach.html">Thử thách</a>
+
+        <a href="tacdong.html">Tác động</a>
+
+        <a href="disan_baihoc.html">Di sản – Bài học</a>
+
+        <a href="thuvien_nguon.html">Thư viện – Nguồn</a>
+
+    </nav>
+
+
+    <main class="container">
+
+        <!-- BANNER GIOI THIEU -->
+        <div class="life-banner">
+
+            <h2>CUỘC ĐỜI VÀ BỐI CẢNH CỦA NGÔ QUYỀN</h2>
+
+            <p>
+                Từ quê hương Đường Lâm đến bước ngoặt lịch sử
+                trên sông Bạch Đằng năm 938.
+            </p>
+
+        </div>
+
+
+        <!-- MUC 1 -->
+        <section class="life-section">
+
+            <h3>1. Ngày sinh và quê quán</h3>
+
+            <p>
+                Ngô Quyền (897–944) là vị anh hùng dân tộc,
+                người lãnh đạo chiến thắng Bạch Đằng năm 938.
+                Theo các tài liệu lịch sử phổ biến, ông quê ở
+                Đường Lâm, nay thuộc Hà Nội.
+            </p>
+
+            <div class="life-info">
+
+                <p><strong>Họ và tên:</strong> Ngô Quyền</p>
+
+                <p><strong>Năm sinh:</strong> 897</p>
+
+                <p><strong>Năm mất:</strong> 944</p>
+
+                <p><strong>Quê quán:</strong> Đường Lâm</p>
+
+                <p>
+                    <strong>Vai trò lịch sử:</strong>
+                    Lãnh đạo cuộc kháng chiến chống quân Nam Hán
+                    năm 938, sau đó xưng vương năm 939.
+                </p>
+
+            </div>
+
+            <figure class="life-image">
+
+                <img
+                    src="https://baotanglichsu.vn/DataFiles/Uploaded/image/Ngo%20Quyen/1.jpg"
+                    alt="Hình ảnh tượng Ngô Quyền tại di tích Từ Lương Xâm"
+                    loading="lazy">
+
+                <figcaption>
+                    Hình 1. Hình ảnh được sử dụng để minh họa
+                    nhân vật Ngô Quyền.
+                </figcaption>
+
+            </figure>
+
+        </section>
+
+
+        <!-- MUC 2 -->
+        <section class="life-section">
+
+            <h3>2. Gia đình và tuổi thơ</h3>
+
+            <p>
+                Theo các tài liệu lịch sử phổ biến, cha của
+                Ngô Quyền là Ngô Mân, từng giữ chức châu mục
+                ở Đường Lâm. Ngô Quyền trưởng thành trong một
+                vùng quê có truyền thống và những biến động
+                gắn với cuộc đấu tranh giành quyền tự chủ.
+            </p>
+
+            <p>
+                Những năm đầu đời của ông diễn ra trong thời kỳ
+                đất nước có nhiều biến động. Quyền lực của các
+                thế lực địa phương và những cuộc đấu tranh giành
+                quyền tự chủ ảnh hưởng đến tình hình xã hội.
+                Tuy nhiên, tư liệu hiện còn không cho phép khẳng định
+                chi tiết về sinh hoạt hằng ngày hoặc các sự kiện
+                cụ thể trong tuổi thơ của ông.
+            </p>
+
+            <div class="life-info">
+                <p>
+                    <strong>Điều đáng chú ý:</strong>
+                    Truyền thống quê hương và hoàn cảnh đất nước
+                    là những yếu tố cần được xem xét khi tìm hiểu
+                    con đường hoạt động của Ngô Quyền.
+                </p>
+            </div>
+
+            <figure class="life-image">
+
+                <img
+                    src="https://baotanglichsu.vn/DataFiles/Uploaded/image/Ngo%20Quyen/4.jpg"
+                    alt="Hình ảnh di tích gắn với việc tưởng nhớ Ngô Quyền"
+                    loading="lazy">
+
+                <figcaption>
+                    Hình 2. Hình ảnh minh họa di tích gắn với
+                    việc tưởng nhớ Ngô Quyền.
+                </figcaption>
+
+            </figure>
+
+        </section>
+
+
+        <!-- MUC 3 -->
+        <section class="life-section">
+
+            <h3>3. Quá trình học tập và trưởng thành</h3>
+
+            <p>
+                Các tư liệu lịch sử phổ biến không ghi chép đầy đủ
+                về trường lớp, thầy dạy hoặc một chương trình học
+                chính quy của Ngô Quyền. Vì vậy, không nên khẳng định
+                ông từng theo học tại một trường cụ thể khi chưa có
+                chứng cứ đáng tin cậy.
+            </p>
+
+            <p>
+                Có thể tìm hiểu sự trưởng thành của Ngô Quyền
+                qua con đường hoạt động thực tế. Ông tham gia
+                lực lượng của Dương Đình Nghệ và từng bước thể hiện
+                vai trò trong cuộc đấu tranh bảo vệ quyền tự chủ.
+                Những trải nghiệm quân sự, tình hình chính trị
+                và nguy cơ xâm lược góp phần tạo nên hoàn cảnh
+                hoạt động của ông.
+            </p>
+
+            <div class="life-info">
+                <p>
+                    <strong>Lưu ý:</strong>
+                    Do tư liệu về việc học tập của Ngô Quyền còn hạn chế,
+                    nội dung này tập trung vào quá trình hoạt động
+                    và trưởng thành của ông.
+                </p>
+            </div>
+
+        </section>
+
+
+        <!-- MUC 4 -->
+        <section class="life-section">
+
+            <h3>4. Bối cảnh lịch sử, xã hội thời Ngô Quyền</h3>
+
+            <p>
+                Đầu thế kỉ X, sau thời gian dài chịu sự đô hộ
+                của các triều đại phương Bắc, người Việt từng bước
+                khôi phục quyền tự chủ. Tuy nhiên, nền tự chủ còn
+                mong manh và phải đối mặt với nguy cơ can thiệp
+                từ bên ngoài.
+            </p>
+
+            <p>
+                Năm 930, quân Nam Hán tiến đánh nước ta.
+                Năm 931, Dương Đình Nghệ tổ chức lực lượng
+                đánh đuổi quân Nam Hán và giành lại quyền kiểm soát.
+                Ngô Quyền sau đó hoạt động trong lực lượng
+                của Dương Đình Nghệ.
+            </p>
+
+            <p>
+                Năm 937, Dương Đình Nghệ bị Kiều Công Tiễn sát hại.
+                Kiều Công Tiễn cầu cứu nhà Nam Hán, tạo cớ để
+                triều đình này chuẩn bị cuộc xâm lược mới.
+                Đây là hoàn cảnh trực tiếp khiến Ngô Quyền phải
+                tổ chức lực lượng giải quyết nguy cơ trong nước
+                và chuẩn bị kháng chiến.
+            </p>
+
+            <div class="life-info">
+
+                <p>
+                    <strong>Bước ngoặt lịch sử:</strong>
+                    Năm 938, Ngô Quyền đánh bại quân Nam Hán
+                    trên sông Bạch Đằng. Năm 939, ông xưng vương
+                    và đóng đô ở Cổ Loa.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- MUC 5 -->
+        <section class="life-section">
+
+            <h3>5. Những khó khăn và điều kiện đặc biệt</h3>
+
+            <div class="life-timeline">
+
+                <div class="life-event">
+
+                    <h4>Nền tự chủ còn non trẻ</h4>
+
+                    <p>
+                        Đất nước vừa giành lại quyền tự chủ
+                        nhưng vẫn phải đối diện nguy cơ bị
+                        các thế lực bên ngoài tái xâm lược.
+                    </p>
+
+                </div>
+
+                <div class="life-event">
+
+                    <h4>Tình hình chính trị bất ổn</h4>
+
+                    <p>
+                        Việc Dương Đình Nghệ bị sát hại làm nảy sinh
+                        khủng hoảng và tạo điều kiện để nhà Nam Hán
+                        can thiệp vào tình hình nước ta.
+                    </p>
+
+                </div>
+
+                <div class="life-event">
+
+                    <h4>Đối mặt với nguy cơ xâm lược</h4>
+
+                    <p>
+                        Ngô Quyền phải tổ chức lực lượng,
+                        đánh giá tình hình và lựa chọn phương án
+                        đối phó với quân Nam Hán.
+                    </p>
+
+                </div>
+
+                <div class="life-event">
+
+                    <h4>Phát huy sức mạnh tập thể</h4>
+
+                    <p>
+                        Việc tổ chức lực lượng và phối hợp quân dân
+                        là những yếu tố quan trọng trong cuộc kháng chiến
+                        dẫn đến chiến thắng Bạch Đằng năm 938.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- MUC 6 -->
+        <section class="life-section">
+
+            <h3>6. Hoàn cảnh đã góp phần hình thành Ngô Quyền như thế nào?</h3>
+
+            <p>
+                Ngô Quyền trưởng thành trong thời kỳ đất nước
+                vừa nỗ lực giành quyền tự chủ vừa phải đối mặt
+                với những cuộc tranh giành quyền lực và nguy cơ
+                xâm lược. Hoàn cảnh ấy đặt ra yêu cầu phải có
+                người đủ khả năng tổ chức lực lượng, đưa ra
+                quyết định chiến lược và bảo vệ đất nước.
+            </p>
+
+            <p>
+                Qua hoạt động quân sự và chiến thắng năm 938,
+                Ngô Quyền cho thấy khả năng đánh giá tình hình,
+                tận dụng địa hình và lựa chọn thời cơ.
+                Vì thế, muốn hiểu sự nghiệp của ông, cần đặt
+                cuộc đời ông trong bối cảnh đấu tranh giành
+                độc lập của dân tộc đầu thế kỉ X.
+            </p>
+
+            <div class="life-quote">
+                “Hiểu hoàn cảnh của một nhân vật lịch sử
+                giúp chúng ta hiểu rõ hơn những lựa chọn
+                và đóng góp của nhân vật ấy.”
+            </div>
+
+            <p class="message-note">
+                Đây là câu khái quát do nhóm biên soạn,
+                không phải lời trích dẫn nguyên văn của Ngô Quyền.
+            </p>
+
+        </section>
+
+
+        <!-- MUC 7 -->
+        <section class="life-section">
+
+            <h3>7. Kết luận</h3>
+
+            <p>
+                Cuộc đời Ngô Quyền gắn liền với giai đoạn có ý nghĩa
+                đặc biệt của lịch sử Việt Nam. Từ quê hương Đường Lâm,
+                qua quá trình hoạt động quân sự trong thời kỳ nhiều
+                biến động, ông trở thành người lãnh đạo chiến thắng
+                Bạch Đằng năm 938 và xây dựng chính quyền tự chủ
+                vào năm 939.
+            </p>
+
+            <p>
+                Tìm hiểu hoàn cảnh trưởng thành của Ngô Quyền
+                giúp chúng ta nhận thức sâu sắc hơn giá trị
+                của độc lập, tinh thần tự chủ và công lao
+                của các thế hệ đi trước.
+            </p>
+
+        </section>
+
+
+        <!-- MUC 8 -->
+        <section class="life-section">
+
+            <h3>8. Nguồn tham khảo</h3>
+
+            <p>
+                Những nguồn dưới đây được đưa vào để phục vụ
+                việc kiểm tra và tìm hiểu thêm. Bạn cần mở từng
+                liên kết, xác nhận nội dung và ghi đúng tên bài,
+                cơ quan xuất bản trước khi nộp dự án.
+            </p>
+
+            <ol class="source-list">
+
+                <li>
+                    <a
+                        href="https://baotanglichsu.vn/vi/Articles/3098/13934/ngo-quyen-va-chienthang-bach-dang-nam-938.html"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        Bảo tàng Lịch sử Quốc gia – Ngô Quyền và
+                        chiến thắng Bạch Đằng năm 938
+                    </a>
+                </li>
+
+                <li>
+                    <a
+                        href="https://www.langcoduonglam.vn/vi/page/gioi-thieu"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        Làng cổ Đường Lâm – Giới thiệu
+                    </a>
+                </li>
+
+            </ol>
+
+            <div class="life-info">
+                <p>
+                    
+                </p>
+            </div>
+
+        </section>
+
+
+        <!-- DIEU HUONG CUOI TRANG -->
+        <div class="page-navigation">
+
+            <a href="index.html">
+                ← Quay lại trang chủ
+            </a>
+
+            <a href="hanhtrinh.html">
+                Tiếp theo: Hành trình →
+            </a>
+
+        </div>
+
+    </main>
+
+
+    <!-- CHAN TRANG -->
+    <footer class="footer">
+
+        <h2>NGÔ QUYỀN – HÀO KHÍ BẠCH ĐẰNG</h2>
+
+        <p>
+            Dự án Tin học 12:
+            <strong>Những con người làm thay đổi thế giới</strong>
+        </p>
+
+        <p>
+            Trang 2: Cuộc đời và bối cảnh lịch sử
+        </p>
+
+        <p class="copyright">
+            Nội dung phục vụ mục đích học tập.
+            Thông tin lịch sử và hình ảnh cần được kiểm tra
+            theo nguồn tham khảo đáng tin cậy.
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Hành trình lịch sử | Ngô Quyền</title>
+<link rel="stylesheet" href="style.css">
+
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #f7f2e8;
+        color: #30251e;
+        line-height: 1.7;
+    }
+
+    header {
+        background: linear-gradient(135deg, #541414, #8b2525);
+        color: #fff0c2;
+        text-align: center;
+        padding: 38px 18px;
+        border-bottom: 5px solid #d8ad58;
+    }
+
+    header h1 {
+        margin: 0 0 8px;
+        font-size: clamp(23px, 4vw, 36px);
+        line-height: 1.35;
+    }
+
+    header p {
+        margin: 0;
+        color: #f8e6bc;
+    }
+
+    nav {
+        background: #3d1010;
+        padding: 12px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 6px;
+    }
+
+    nav a {
+        color: #fff0c2;
+        text-decoration: none;
+        padding: 8px 11px;
+        border-radius: 5px;
+        font-size: 14px;
+    }
+
+    nav a:hover,
+    nav a.dang-xem {
+        background: #9b3030;
+        color: white;
+    }
+
+    .gioi-thieu {
+        max-width: 1000px;
+        margin: 28px auto;
+        padding: 0 18px;
+    }
+
+    .khung-gioi-thieu {
+        background: white;
+        border-left: 5px solid #8b2525;
+        border-radius: 10px;
+        padding: 22px;
+        box-shadow: 0 3px 12px #0000000c;
+    }
+
+    .nhan {
+        color: #8b2525;
+        font-weight: bold;
+        letter-spacing: 1px;
+        font-size: 13px;
+        text-transform: uppercase;
+    }
+
+    h2 {
+        color: #741d1d;
+        margin-top: 0;
+        line-height: 1.4;
+    }
+
+    .tieu-de-muc {
+        text-align: center;
+        margin: 0 0 28px;
+    }
+
+    .tieu-de-muc p {
+        color: #74665b;
+        margin: 8px auto 0;
+        max-width: 650px;
+    }
+
+    .dong-thoi-gian {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 0 18px;
+    }
+
+    .moc {
+        position: relative;
+        margin: 0 0 22px 15px;
+        padding: 0 0 0 28px;
+        border-left: 3px solid #d5b46d;
+    }
+
+    .moc::before {
+        content: "";
+        position: absolute;
+        left: -9px;
+        top: 22px;
+        width: 15px;
+        height: 15px;
+        background: #8b2525;
+        border: 3px solid #f7e4b6;
+        border-radius: 50%;
+    }
+
+    .the-moc {
+        background: white;
+        padding: 20px 22px;
+        border-radius: 10px;
+        border: 1px solid #eadfc9;
+        box-shadow: 0 4px 12px #4b28100b;
+        transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .the-moc:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 7px 18px #4b281018;
+    }
+
+    .nam {
+        display: inline-block;
+        background: #7b1e1e;
+        color: #ffe7a0;
+        padding: 5px 13px;
+        border-radius: 20px;
+        font-size: 14px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .the-moc h3 {
+        color: #672020;
+        margin: 0 0 8px;
+        font-size: 19px;
+    }
+
+    .the-moc p {
+        margin: 0;
+    }
+
+    .diem-nhan {
+        max-width: 900px;
+        margin: 35px auto;
+        padding: 0 18px;
+    }
+
+    .khung-diem-nhan {
+        background: #fff8e8;
+        border: 1px solid #e1c98f;
+        border-radius: 12px;
+        padding: 24px;
+    }
+
+    .khung-diem-nhan h2 {
+        margin-bottom: 12px;
+    }
+
+    .bai-hoc {
+        max-width: 900px;
+        margin: 35px auto;
+        padding: 0 18px;
+    }
+
+    .danh-sach-bai-hoc {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+    }
+
+    .bai-hoc-item {
+        background: white;
+        border: 1px solid #eadfc9;
+        border-radius: 9px;
+        padding: 16px;
+    }
+
+    .bai-hoc-item strong {
+        color: #7b1e1e;
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .lien-ket-them {
+        max-width: 900px;
+        margin: 35px auto;
+        padding: 0 18px;
+    }
+
+    .lien-ket-them a {
+        color: #7b1e1e;
+        font-weight: bold;
+    }
+
+    .chuyen-trang {
+        max-width: 900px;
+        margin: 35px auto;
+        padding: 0 18px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .nut-trang {
+        display: inline-block;
+        background: #7b1e1e;
+        color: #fff0c2;
+        padding: 12px 16px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .nut-trang:hover {
+        background: #a33232;
+    }
+
+    footer {
+        background: #3d1010;
+        color: #f7e6c4;
+        text-align: center;
+        padding: 22px 15px;
+        margin-top: 35px;
+        font-size: 14px;
+    }
+
+    footer p {
+        margin: 4px 0;
+    }
+
+    @media (max-width: 600px) {
+        header {
+            padding: 28px 15px;
+        }
+
+        nav {
+            gap: 4px;
+        }
+
+        nav a {
+            font-size: 13px;
+            padding: 7px 8px;
+        }
+
+        .khung-gioi-thieu,
+        .the-moc,
+        .khung-diem-nhan {
+            padding: 17px;
+        }
+
+        .danh-sach-bai-hoc {
+            grid-template-columns: 1fr;
+        }
+
+        .chuyen-trang {
+            align-items: stretch;
+        }
+
+        .nut-trang {
+            flex: 1;
+            font-size: 13px;
+            padding: 11px 9px;
+        }
+    }
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>HÀNH TRÌNH LỊCH SỬ CỦA NGÔ QUYỀN</h1>
+    <p>Người mở ra thời kỳ độc lập, tự chủ cho dân tộc Việt Nam</p>
+</header>
+
+<nav>
+    <a href="index.html">Trang chủ</a>
+    <a href="cuocdoi.html">Cuộc đời</a>
+    <a href="hanhtrinh.html" class="dang-xem">Hành trình</a>
+    <a href="thanhtuu.html">Thành tựu</a>
+    <a href="thuthach.html">Thử thách</a>
+    <a href="tacdong.html">Tác động</a>
+    <a href="disan_baihoc.html">Di sản – Bài học</a>
+    <a href="thuvien_nguon.html">Thư viện – Nguồn</a>
+</nav>
+
+<main>
+
+    <section class="gioi-thieu">
+        <div class="khung-gioi-thieu">
+            <span class="nhan">Tổng quan lịch sử</span>
+            <h2>Từ người tướng tài đến vị vua mở nền tự chủ</h2>
+            <p>
+                Cuộc đời và sự nghiệp của Ngô Quyền gắn liền với
+                bước ngoặt quan trọng của lịch sử Việt Nam thế kỷ X.
+                Bằng tài năng quân sự và tinh thần quyết tâm bảo vệ
+                đất nước, ông đã lãnh đạo chiến thắng Bạch Đằng năm
+                938, tạo tiền đề cho việc xây dựng một quốc gia
+                độc lập, tự chủ.
+            </p>
+        </div>
+    </section>
+
+    <section class="dong-thoi-gian">
+        <div class="tieu-de-muc">
+            <h2>Những mốc thời gian quan trọng</h2>
+            <p>
+                Theo dõi hành trình của Ngô Quyền qua các sự kiện
+                tiêu biểu trong lịch sử dân tộc.
+            </p>
+        </div>
+
+        <div class="moc">
+            <article class="the-moc">
+                <span class="nam">Khoảng năm 898</span>
+                <h3>Ngô Quyền ra đời</h3>
+                <p>
+                    Ngô Quyền sinh tại Đường Lâm, một vùng đất có
+                    truyền thống lâu đời. Ông lớn lên trong bối cảnh
+                    đất nước đấu tranh giành quyền tự chủ.
+                </p>
+            </article>
+        </div>
+
+        <div class="moc">
+            <article class="the-moc">
+                <span class="nam">Năm 931</span>
+                <h3>Tham gia thời kỳ giành quyền tự chủ</h3>
+                <p>
+                    Dương Đình Nghệ đánh đuổi quân Nam Hán, giành
+                    lại quyền tự chủ. Ngô Quyền là một tướng tài,
+                    từng giữ chức Thứ sử Ái Châu và dần khẳng định
+                    vai trò của mình.
+                </p>
+            </article>
+        </div>
+
+        <div class="moc">
+            <article class="the-moc">
+                <span class="nam">Năm 937–938</span>
+                <h3>Chuẩn bị chống quân Nam Hán</h3>
+                <p>
+                    Sau khi Dương Đình Nghệ bị Kiều Công Tiễn sát hại,
+                    Ngô Quyền tập hợp lực lượng tiến ra Bắc. Trước
+                    nguy cơ quân Nam Hán xâm lược, ông chủ động chuẩn
+                    bị kế hoạch bảo vệ đất nước.
+                </p>
+            </article>
+        </div>
+
+        <div class="moc">
+            <article class="the-moc">
+                <span class="nam">Năm 938</span>
+                <h3>Chiến thắng Bạch Đằng lịch sử</h3>
+                <p>
+                    Ngô Quyền chỉ huy quân dân ta đánh bại quân Nam Hán
+                    trên sông Bạch Đằng. Ông tận dụng địa hình và
+                    quy luật thủy triều, bố trí trận địa cọc để đánh
+                    bại quân địch, bảo vệ nền độc lập của dân tộc.
+                </p>
+            </article>
+        </div>
+
+        <div class="moc">
+            <article class="the-moc">
+                <span class="nam">Năm 939</span>
+                <h3>Xưng vương, đóng đô ở Cổ Loa</h3>
+                <p>
+                    Sau chiến thắng, Ngô Quyền xưng vương và chọn
+                    Cổ Loa làm kinh đô. Đây là bước quan trọng trong
+                    việc xây dựng chính quyền độc lập, khẳng định
+                    quyền tự chủ của đất nước.
+                </p>
+            </article>
+        </div>
+
+        <div class="moc">
+            <article class="the-moc">
+                <span class="nam">Năm 944</span>
+                <h3>Ngô Quyền qua đời</h3>
+                <p>
+                    Ngô Quyền qua đời, để lại dấu ấn lớn trong lịch sử.
+                    Chiến thắng Bạch Đằng và việc xây dựng chính quyền
+                    tự chủ của ông có ý nghĩa lâu dài đối với dân tộc
+                    Việt Nam.
+                </p>
+            </article>
+        </div>
+    </section>
+
+    <section class="diem-nhan">
+        <div class="khung-diem-nhan">
+            <span class="nhan">Bước ngoặt lịch sử</span>
+            <h2>Chiến thắng Bạch Đằng năm 938</h2>
+            <p>
+                Đây là sự kiện nổi bật nhất trong hành trình của
+                Ngô Quyền. Chiến thắng đã đập tan cuộc xâm lược
+                của quân Nam Hán, chấm dứt thời kỳ Bắc thuộc kéo dài
+                và mở ra thời kỳ độc lập, tự chủ lâu dài cho dân tộc.
+                Năm 939, việc Ngô Quyền xưng vương tiếp tục khẳng định
+                thành quả ấy.
+            </p>
+            <p>
+                <strong>
+                    Tìm hiểu sâu hơn tại trang
+                    <a href="thanhtuu.html" style="color:#7b1e1e;">
+                        Thành tựu
+                    </a>.
+                </strong>
+            </p>
+        </div>
+    </section>
+
+    <section class="bai-hoc">
+        <div class="tieu-de-muc">
+            <h2>Bài học từ hành trình lịch sử</h2>
+            <p>
+                Những giá trị vẫn còn ý nghĩa đối với thế hệ hôm nay.
+            </p>
+        </div>
+
+        <div class="danh-sach-bai-hoc">
+            <div class="bai-hoc-item">
+                <strong>01. Lòng yêu nước</strong>
+                Luôn có ý thức bảo vệ độc lập, chủ quyền và những
+                giá trị của dân tộc.
+            </div>
+
+            <div class="bai-hoc-item">
+                <strong>02. Tư duy chiến lược</strong>
+                Biết phân tích tình hình, tận dụng địa hình và
+                thời cơ để đạt mục tiêu.
+            </div>
+
+            <div class="bai-hoc-item">
+                <strong>03. Tinh thần đoàn kết</strong>
+                Phát huy sức mạnh tập thể để vượt qua khó khăn
+                và thử thách.
+            </div>
+
+            <div class="bai-hoc-item">
+                <strong>04. Trách nhiệm với lịch sử</strong>
+                Tìm hiểu, trân trọng và gìn giữ truyền thống
+                tốt đẹp của dân tộc Việt Nam.
+            </div>
+        </div>
+    </section>
+
+    <section class="lien-ket-them">
+        <h2>Khám phá tiếp về Ngô Quyền</h2>
+        <p>
+            <a href="cuocdoi.html">Tìm hiểu cuộc đời →</a>
+        </p>
+        <p>
+            <a href="thanhtuu.html">Khám phá những thành tựu →</a>
+        </p>
+        <p>
+            <a href="thuvien_nguon.html">Xem thư viện và nguồn tham khảo →</a>
+        </p>
+    </section>
+
+</main>
+
+<div class="chuyen-trang">
+    <a href="cuocdoi.html" class="nut-trang">
+        ← Trang trước: Cuộc đời
+    </a>
+
+    <a href="thanhtuu.html" class="nut-trang">
+        Trang tiếp theo: Thành tựu →
+    </a>
+</div>
+
+<footer>
+    <p><strong>Website Tin học 12</strong></p>
+    <p>Chủ đề: Những con người làm thay đổi thế giới</p>
+    <p>Nhân vật: Ngô Quyền</p>
+</footer>
+
+</body>
+</html>
+

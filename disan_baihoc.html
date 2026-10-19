@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Di sản và bài học từ Ngô Quyền</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* ===== GIAO DIỆN TRANG DI SẢN ===== */
+
+        .legacy-hero {
+            text-align: center;
+            padding: 45px 20px;
+            color: #f8e9c5;
+            background: linear-gradient(135deg, #4b1010, #861f1f);
+            border-bottom: 5px solid #c9a45c;
+        }
+
+        .legacy-hero .eyebrow {
+            color: #e8cb83;
+            font-size: 14px;
+            letter-spacing: 2px;
+            font-weight: bold;
+        }
+
+        .legacy-hero h1 {
+            color: #f4d58d;
+            font-size: clamp(27px, 4vw, 42px);
+            margin: 18px 0;
+            line-height: 1.4;
+        }
+
+        .legacy-hero p {
+            max-width: 850px;
+            margin: 0 auto;
+            font-size: 17px;
+            line-height: 1.8;
+        }
+
+        /* ===== NỘI DUNG CHÍNH ===== */
+
+        .legacy-container {
+            width: min(1100px, 92%);
+            margin: 35px auto;
+        }
+
+        .legacy-section {
+            margin-bottom: 42px;
+        }
+
+        .legacy-section > h2 {
+            color: #852222;
+            font-size: clamp(24px, 3vw, 32px);
+            line-height: 1.5;
+            border-left: 6px solid #c9a45c;
+            padding: 8px 15px;
+            margin-bottom: 24px;
+        }
+
+        /* ===== CÁC THẺ NỘI DUNG ===== */
+
+        .legacy-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 22px;
+        }
+
+        .legacy-card {
+            min-width: 0;
+            padding: 24px;
+            background: #fffaf0;
+            border: 1px solid #e3d0a4;
+            border-radius: 16px;
+            box-shadow: 0 5px 16px rgba(75, 35, 10, 0.08);
+            overflow-wrap: break-word;
+        }
+
+        .legacy-card h3 {
+            color: #852222;
+            font-size: 22px;
+            line-height: 1.5;
+            margin: 0 0 12px;
+        }
+
+        .legacy-card p {
+            color: #3e3028;
+            font-size: 17px;
+            line-height: 1.85;
+            margin: 0 0 14px;
+        }
+
+        .legacy-card p:last-child {
+            margin-bottom: 0;
+        }
+
+        .legacy-card ul {
+            padding-left: 24px;
+            margin-bottom: 0;
+        }
+
+        .legacy-card li {
+            color: #3e3028;
+            font-size: 17px;
+            line-height: 1.8;
+            margin-bottom: 13px;
+        }
+
+        .legacy-card li:last-child {
+            margin-bottom: 0;
+        }
+
+        /* ===== CẢM NHẬN THÀNH VIÊN ===== */
+
+        .reflection {
+            border-top: 4px solid #b58b3b;
+        }
+
+        .reflection h3 {
+            padding-bottom: 12px;
+            border-bottom: 1px solid #e7d8b8;
+        }
+
+        .student-name {
+            color: #852222 !important;
+            font-weight: bold;
+            text-align: right;
+            margin-top: 15px !important;
+        }
+
+        /* ===== THÔNG ĐIỆP CUỐI TRANG ===== */
+
+        .final-message {
+            padding: 30px 25px;
+            color: #fff3d4;
+            background: #681919;
+            border: 2px solid #c9a45c;
+            border-radius: 15px;
+            text-align: center;
+            margin: 35px 0;
+        }
+
+        .final-message h2 {
+            color: #f4d58d;
+            font-size: 28px;
+            margin-top: 0;
+        }
+
+        .final-message p {
+            font-size: 17px;
+            line-height: 1.9;
+            margin-bottom: 10px;
+        }
+
+        .main-quote {
+            color: #f4d58d;
+            font-size: 21px !important;
+            font-weight: bold;
+        }
+
+        /* ===== NÚT CHUYỂN TRANG ===== */
+
+        .page-navigation {
+            display: flex;
+            justify-content: space-between;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin: 30px 0;
+        }
+
+        .page-navigation a {
+            display: inline-block;
+            padding: 12px 17px;
+            color: #fff8e8;
+            background: #791d1d;
+            border: 1px solid #c9a45c;
+            border-radius: 8px;
+            text-decoration: none;
+            line-height: 1.6;
+        }
+
+        .page-navigation a:hover {
+            background: #a32c2c;
+        }
+
+        /* ===== TƯƠNG THÍCH ĐIỆN THOẠI ===== */
+
+        @media (max-width: 700px) {
+            .legacy-hero {
+                padding: 30px 16px;
+            }
+
+            .legacy-hero p {
+                font-size: 16px;
+            }
+
+            .legacy-container {
+                width: 92%;
+                margin: 28px auto;
+            }
+
+            .legacy-grid {
+                grid-template-columns: 1fr;
+                gap: 18px;
+            }
+
+            .legacy-card {
+                padding: 20px;
+            }
+
+            .legacy-card h3 {
+                font-size: 21px;
+            }
+
+            .legacy-card p,
+            .legacy-card li {
+                font-size: 16px;
+            }
+
+            .page-navigation {
+                flex-direction: column;
+            }
+
+            .page-navigation a {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- PHẦN GIỚI THIỆU -->
+
+    <header class="legacy-hero">
+        <p class="eyebrow">NHỮNG CON NGƯỜI LÀM THAY ĐỔI THẾ GIỚI</p>
+
+        <h1>DI SẢN VÀ BÀI HỌC TỪ NGÔ QUYỀN</h1>
+
+        <p>
+            Chiến thắng Bạch Đằng năm 938 là dấu mốc quan trọng trong lịch sử
+            dân tộc. Từ cuộc đời và sự nghiệp của Ngô Quyền, chúng ta có thể
+            rút ra nhiều bài học về lòng yêu nước, trí tuệ, tinh thần đoàn kết
+            và ý thức độc lập, tự chủ.
+        </p>
+    </header>
+
+    <!-- THANH MENU CHUNG CỦA 8 TRANG -->
+
+    <nav class="navbar">
+        <a href="index.html">Trang chủ</a>
+        <a href="cuocdoi.html">Cuộc đời</a>
+        <a href="hanhtrinh.html">Hành trình</a>
+        <a href="thanhtuu.html">Thành tựu</a>
+        <a href="thuthach.html">Thử thách</a>
+        <a href="tacdong.html">Tác động</a>
+        <a href="disan_baihoc.html" class="active">Di sản – Bài học</a>
+        <a href="thuvien_nguon.html">Thư viện – Nguồn</a>
+    </nav>
+
+    <main class="legacy-container">
+
+        <!-- PHẦN 1: DI SẢN LỊCH SỬ -->
+
+        <section class="legacy-section">
+            <h2>1. Di sản lịch sử của Ngô Quyền</h2>
+
+            <div class="legacy-grid">
+
+                <article class="legacy-card">
+                    <h3>⚔️ Chiến thắng Bạch Đằng năm 938</h3>
+
+                    <p>
+                        Ngô Quyền lãnh đạo quân dân đánh bại quân Nam Hán
+                        trên sông Bạch Đằng. Chiến thắng này đập tan ý đồ
+                        xâm lược của đối phương, tạo bước ngoặt quan trọng
+                        trong lịch sử đấu tranh giành độc lập của dân tộc.
+                    </p>
+                </article>
+
+                <article class="legacy-card">
+                    <h3>🏛️ Xây dựng nền tự chủ</h3>
+
+                    <p>
+                        Năm 939, Ngô Quyền xưng vương và đóng đô ở Cổ Loa.
+                        Đây là bước đi quan trọng khẳng định quyền tự chủ
+                        của đất nước và mở ra một giai đoạn phát triển mới
+                        trong lịch sử Việt Nam.
+                    </p>
+                </article>
+
+                <article class="legacy-card">
+                    <h3>🧠 Nghệ thuật quân sự sáng tạo</h3>
+
+                    <p>
+                        Việc tận dụng địa hình sông Bạch Đằng và quy luật
+                        thủy triều thể hiện khả năng quan sát, tính toán
+                        và vận dụng điều kiện tự nhiên vào chiến đấu.
+                    </p>
+                </article>
+
+                <article class="legacy-card">
+                    <h3>🇻🇳 Tinh thần độc lập, tự chủ</h3>
+
+                    <p>
+                        Sự nghiệp của Ngô Quyền là một dấu mốc quan trọng
+                        trong truyền thống yêu nước, ý chí độc lập và
+                        tinh thần đoàn kết của dân tộc Việt Nam.
+                    </p>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- PHẦN 2: BÀI HỌC -->
+
+        <section class="legacy-section">
+            <h2>2. Những bài học rút ra</h2>
+
+            <div class="legacy-card">
+                <ul>
+                    <li>
+                        <strong>Lòng yêu nước:</strong>
+                        Có ý thức trách nhiệm với quê hương, đất nước
+                        và cộng đồng.
+                    </li>
+
+                    <li>
+                        <strong>Tư duy sáng tạo:</strong>
+                        Biết quan sát, phân tích tình hình và lựa chọn
+                        phương pháp phù hợp để giải quyết vấn đề.
+                    </li>
+
+                    <li>
+                        <strong>Sự chuẩn bị chu đáo:</strong>
+                        Muốn đạt mục tiêu cần có kế hoạch rõ ràng,
+                        kiên trì và chủ động trước khó khăn.
+                    </li>
+
+                    <li>
+                        <strong>Tinh thần đoàn kết:</strong>
+                        Biết hợp tác, tôn trọng và phát huy sức mạnh
+                        của tập thể.
+                    </li>
+
+                    <li>
+                        <strong>Ý thức tự chủ:</strong>
+                        Chủ động học tập, rèn luyện và chịu trách nhiệm
+                        với những lựa chọn của bản thân.
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- PHẦN 3: CẢM NHẬN CỦA THÀNH VIÊN -->
+
+        <section class="legacy-section">
+            <h2>3. Cảm nhận của thành viên</h2>
+
+            <div class="legacy-grid">
+
+                <article class="legacy-card reflection">
+                    <h3>Cảm nhận của Phúc Đăng</h3>
+
+                    <p>
+                        Qua việc tìm hiểu về Ngô Quyền, em nhận thấy lòng
+                        yêu nước cần đi đôi với trí tuệ và hành động cụ thể.
+                        Chiến thắng Bạch Đằng năm 938 cho thấy việc hiểu rõ
+                        địa hình, biết tận dụng điều kiện tự nhiên và chuẩn
+                        bị kế hoạch phù hợp có ý nghĩa rất lớn. Em cũng hiểu
+                        rằng thành công không chỉ đến từ sức mạnh mà còn
+                        cần sự đoàn kết và khả năng lãnh đạo. Trong học tập,
+                        em sẽ cố gắng chủ động tìm hiểu kiến thức, hợp tác
+                        với các bạn và kiên trì khi gặp bài khó. Đối với em,
+                        Ngô Quyền là tấm gương về tinh thần tự chủ, sáng tạo
+                        và trách nhiệm với đất nước.
+                    </p>
+
+                    <p class="student-name">— Phúc Đăng</p>
+                </article>
+
+                <article class="legacy-card reflection">
+                    <h3>Cảm nhận của Quỳnh Chương</h3>
+
+                    <p>
+                        Điều em ấn tượng nhất ở Ngô Quyền là khả năng vận
+                        dụng điều kiện tự nhiên để tạo nên chiến thắng
+                        Bạch Đằng năm 938. Qua đó, em hiểu rằng muốn giải
+                        quyết một vấn đề cần bình tĩnh quan sát, suy nghĩ
+                        và lựa chọn cách làm phù hợp. Lịch sử cũng giúp em
+                        nhận thức rõ hơn giá trị của độc lập, tự chủ và
+                        trách nhiệm của mỗi người đối với cộng đồng. Là
+                        học sinh, em cần chăm chỉ học tập, rèn luyện tính
+                        kỷ luật, biết lắng nghe và phối hợp với mọi người.
+                        Em cho rằng di sản của Ngô Quyền không chỉ nằm ở
+                        chiến thắng lịch sử mà còn ở những bài học vẫn
+                        có ý nghĩa đối với thế hệ trẻ hôm nay.
+                    </p>
+
+                    <p class="student-name">— Quỳnh Chương</p>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- PHẦN 4: Ý NGHĨA VỚI GIỚI TRẺ -->
+
+        <section class="legacy-section">
+            <h2>4. Di sản của Ngô Quyền còn ý nghĩa gì với giới trẻ?</h2>
+
+            <div class="legacy-card">
+                <p>
+                    Đối với thế hệ trẻ ngày nay, di sản của Ngô Quyền nhắc
+                    nhở chúng ta trân trọng lịch sử dân tộc và giá trị của
+                    độc lập, tự chủ. Tinh thần sáng tạo, sự chuẩn bị chu đáo
+                    và ý chí vượt qua khó khăn có thể được vận dụng trong
+                    học tập cũng như cuộc sống. Mỗi học sinh có thể thể hiện
+                    lòng yêu nước bằng những việc làm thiết thực như học
+                    tập nghiêm túc, tìm hiểu lịch sử, giữ gìn văn hóa và
+                    có trách nhiệm với cộng đồng.
+                </p>
+            </div>
+        </section>
+
+        <!-- THÔNG ĐIỆP CỦA NHÓM -->
+
+        <section class="final-message">
+            <h2>Thông điệp của nhóm</h2>
+
+            <p class="main-quote">
+                “Hiểu lịch sử để trân trọng hiện tại,
+                học từ quá khứ để xây dựng tương lai.”
+            </p>
+
+            <p>
+                Tìm hiểu về Ngô Quyền giúp chúng ta thêm tự hào về truyền
+                thống dân tộc và có ý thức học tập, rèn luyện để trở thành
+                những công dân có ích.
+            </p>
+        </section>
+
+        <!-- NÚT CHUYỂN TRANG -->
+
+        <div class="page-navigation">
+            <a href="tacdong.html">
+                ← Trang trước: Tác động
+            </a>
+
+            <a href="thuvien_nguon.html">
+                Trang tiếp theo: Thư viện – Nguồn →
+            </a>
+        </div>
+
+    </main>
+
+    <!-- CHÂN TRANG -->
+
+    <footer class="footer">
+        <p>
+            Dự án Tin học 12 – Những con người làm thay đổi thế giới
+        </p>
+
+        <p>
+            Nhân vật: Ngô Quyền | Lớp 12A8
+        </p>
+    </footer>
+
+</body>
+</html>

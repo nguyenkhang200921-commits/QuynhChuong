@@ -1,0 +1,581 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thành tựu nổi bật - Ngô Quyền</title>
+<link rel="stylesheet" href="style.css">
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #f7f2e8;
+    color: #392d25;
+    font-family: Arial, sans-serif;
+    line-height: 1.8;
+}
+
+header {
+    background: linear-gradient(135deg, #451010, #861f28);
+    color: #ffe8b0;
+    text-align: center;
+    padding: 38px 18px;
+    border-bottom: 5px solid #d4ad62;
+}
+
+header .phu-de {
+    font-size: 13px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    margin: 0 0 10px;
+}
+
+header h1 {
+    font-size: clamp(25px, 4vw, 38px);
+    line-height: 1.35;
+    margin: 0 0 12px;
+}
+
+header .mo-ta {
+    margin: 0;
+    color: #f8e8ca;
+}
+
+.navbar {
+    background: #351014;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+    padding: 12px 8px;
+}
+
+.navbar a {
+    color: #ffe8b0;
+    text-decoration: none;
+    padding: 8px 11px;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    background: #c49a47;
+    color: #351014;
+}
+
+main {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 18px;
+}
+
+.gioi-thieu {
+    background: #fffdf7;
+    border-radius: 12px;
+    border-left: 6px solid #8b2525;
+    padding: 25px;
+    box-shadow: 0 5px 18px #4b28100c;
+    margin-bottom: 35px;
+}
+
+.nhan {
+    color: #8b2525;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+h2 {
+    color: #741d1d;
+    line-height: 1.4;
+}
+
+.gioi-thieu h2 {
+    margin: 8px 0 12px;
+    font-size: 26px;
+}
+
+.gioi-thieu p {
+    margin-bottom: 0;
+}
+
+.tieu-de-muc {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.tieu-de-muc h2 {
+    margin-bottom: 8px;
+}
+
+.tieu-de-muc p {
+    color: #76685b;
+    margin: 0 auto;
+    max-width: 680px;
+}
+
+.thanh-tuu {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.the {
+    background: #fffdf7;
+    border: 1px solid #e7d8bd;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 14px #4b28100b;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.the:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px #4b281018;
+}
+
+.the-dau {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #751c23;
+    color: #ffe8b0;
+    padding: 16px 18px;
+}
+
+.so {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 38px;
+    height: 38px;
+    border: 1px solid #e3c77e;
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+.the-dau h3 {
+    margin: 0;
+    font-size: 17px;
+    line-height: 1.5;
+    color: #ffe8b0;
+}
+
+.the-noi-dung {
+    padding: 20px;
+}
+
+.the-noi-dung p {
+    margin: 0 0 14px;
+}
+
+.y-nghia {
+    background: #f8efd9;
+    border-left: 4px solid #c49a47;
+    border-radius: 5px;
+    padding: 12px 14px;
+    font-size: 14px;
+}
+
+.y-nghia strong {
+    color: #751c23;
+}
+
+.diem-nhan {
+    margin-top: 35px;
+    background: linear-gradient(135deg, #5a141a, #82242a);
+    color: #fff4dc;
+    border-radius: 12px;
+    padding: 26px;
+    box-shadow: 0 5px 16px #4b281014;
+}
+
+.diem-nhan .nhan {
+    color: #e9c879;
+}
+
+.diem-nhan h2 {
+    color: #ffe8b0;
+    margin: 8px 0 12px;
+}
+
+.diem-nhan p {
+    margin-bottom: 0;
+}
+
+.bai-hoc {
+    margin-top: 35px;
+    background: #fffdf7;
+    border: 1px solid #e7d8bd;
+    border-radius: 12px;
+    padding: 25px;
+}
+
+.bai-hoc h2 {
+    margin-top: 0;
+}
+
+.bai-hoc ul {
+    padding-left: 22px;
+    margin-bottom: 0;
+}
+
+.bai-hoc li {
+    margin-bottom: 9px;
+}
+
+.bai-hoc li strong {
+    color: #7b1e1e;
+}
+
+.ket-luan {
+    margin-top: 25px;
+    padding: 22px;
+    background: #f3e5c7;
+    border-radius: 10px;
+}
+
+.ket-luan h2 {
+    margin-top: 0;
+}
+
+.ket-luan p {
+    margin-bottom: 0;
+}
+
+nav.bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 14px;
+    margin: 38px 0 15px;
+}
+
+nav.bottom a {
+    flex: 1;
+    max-width: 48%;
+    background: #741d1d;
+    color: #ffe8b0;
+    text-decoration: none;
+    text-align: center;
+    padding: 13px 16px;
+    border-radius: 8px;
+    font-weight: bold;
+    border: 1px solid #741d1d;
+    transition: 0.2s;
+}
+
+nav.bottom a:hover {
+    background: #a33232;
+    border-color: #d4ad62;
+}
+
+footer {
+    background: #351014;
+    color: #f7e6c4;
+    text-align: center;
+    padding: 22px 15px;
+    margin-top: 30px;
+    font-size: 14px;
+}
+
+footer p {
+    margin: 4px 0;
+}
+
+@media (max-width: 650px) {
+    header {
+        padding: 28px 15px;
+    }
+
+    .navbar {
+        gap: 4px;
+    }
+
+    .navbar a {
+        font-size: 12px;
+        padding: 7px 8px;
+    }
+
+    main {
+        padding: 0 12px;
+        margin-top: 20px;
+    }
+
+    .gioi-thieu,
+    .bai-hoc,
+    .diem-nhan {
+        padding: 19px;
+    }
+
+    .gioi-thieu h2 {
+        font-size: 22px;
+    }
+
+    .thanh-tuu {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .the-dau {
+        padding: 14px;
+    }
+
+    .the-noi-dung {
+        padding: 17px;
+    }
+
+    nav.bottom {
+        gap: 10px;
+    }
+
+    nav.bottom a {
+        padding: 12px 8px;
+        font-size: 13px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <p class="phu-de">NHỮNG CON NGƯỜI LÀM THAY ĐỔI THẾ GIỚI</p>
+    <h1>THÀNH TỰU NỔI BẬT CỦA NGÔ QUYỀN</h1>
+    <p class="mo-ta">
+        Chiến thắng Bạch Đằng năm 938 và bước ngoặt lịch sử dân tộc
+    </p>
+</header>
+
+<nav class="navbar">
+    <a href="index.html">Trang chủ</a>
+    <a href="cuocdoi.html">Cuộc đời</a>
+    <a href="hanhtrinh.html">Hành trình</a>
+    <a href="thanhtuu.html" class="active">Thành tựu</a>
+    <a href="thuthach.html">Thử thách</a>
+    <a href="tacdong.html">Tác động</a>
+    <a href="disan_baihoc.html">Di sản – Bài học</a>
+    <a href="thuvien_nguon.html">Thư viện – Nguồn</a>
+</nav>
+
+<main>
+
+    <section class="gioi-thieu">
+        <span class="nhan">Khái quát</span>
+        <h2>Từ chiến thắng quân sự đến xây dựng chính quyền</h2>
+        <p>
+            Ngô Quyền (khoảng năm 898–944) là một anh hùng dân tộc
+            tiêu biểu của Việt Nam thế kỉ X. Ông nổi bật với tài
+            năng quân sự, đặc biệt là chiến thắng Bạch Đằng năm 938.
+            Sau chiến thắng, năm 939, ông xưng vương và đóng đô ở
+            Cổ Loa, đánh dấu bước quan trọng trong việc xây dựng
+            chính quyền độc lập, tự chủ.
+        </p>
+    </section>
+
+    <section>
+        <div class="tieu-de-muc">
+            <h2>Những thành tựu tiêu biểu</h2>
+            <p>
+                Các đóng góp quan trọng của Ngô Quyền đối với
+                lịch sử và quá trình xây dựng đất nước.
+            </p>
+        </div>
+
+        <div class="thanh-tuu">
+
+            <article class="the">
+                <div class="the-dau">
+                    <span class="so">01</span>
+                    <h3>Chiến thắng Bạch Đằng năm 938</h3>
+                </div>
+                <div class="the-noi-dung">
+                    <p>
+                        Trước nguy cơ quân Nam Hán xâm lược, Ngô Quyền
+                        chuẩn bị lực lượng và chọn sông Bạch Đằng làm
+                        nơi quyết chiến. Ông cho bố trí trận địa cọc
+                        và tận dụng quy luật thủy triều để tạo lợi thế
+                        cho quân ta, góp phần đánh bại quân xâm lược.
+                    </p>
+                    <div class="y-nghia">
+                        <strong>Ý nghĩa:</strong> Đập tan cuộc xâm lược
+                        của quân Nam Hán, tạo bước ngoặt lớn cho nền
+                        độc lập, tự chủ của dân tộc.
+                    </div>
+                </div>
+            </article>
+
+            <article class="the">
+                <div class="the-dau">
+                    <span class="so">02</span>
+                    <h3>Nghệ thuật quân sự sáng tạo</h3>
+                </div>
+                <div class="the-noi-dung">
+                    <p>
+                        Ngô Quyền biết tận dụng địa hình sông Bạch Đằng,
+                        tính toán thủy triều và tổ chức lực lượng hợp lí.
+                        Kế hoạch chiến đấu thể hiện sự chủ động, sáng
+                        tạo và khả năng nắm bắt thời cơ.
+                    </p>
+                    <div class="y-nghia">
+                        <strong>Ý nghĩa:</strong> Trở thành dấu mốc tiêu
+                        biểu trong truyền thống quân sự Việt Nam.
+                    </div>
+                </div>
+            </article>
+
+            <article class="the">
+                <div class="the-dau">
+                    <span class="so">03</span>
+                    <h3>Bảo vệ nền tự chủ của người Việt</h3>
+                </div>
+                <div class="the-noi-dung">
+                    <p>
+                        Chiến thắng năm 938 đã chặn đứng cuộc xâm lược
+                        của quân Nam Hán. Thắng lợi giúp người Việt có
+                        điều kiện thuận lợi để củng cố nền tự chủ và
+                        xây dựng chính quyền của mình.
+                    </p>
+                    <div class="y-nghia">
+                        <strong>Ý nghĩa:</strong> Mở ra thời kì phát
+                        triển mới trong tiến trình xây dựng đất nước
+                        độc lập.
+                    </div>
+                </div>
+            </article>
+
+            <article class="the">
+                <div class="the-dau">
+                    <span class="so">04</span>
+                    <h3>Xưng vương năm 939</h3>
+                </div>
+                <div class="the-noi-dung">
+                    <p>
+                        Năm 939, Ngô Quyền xưng vương sau chiến thắng
+                        Bạch Đằng. Đây là bước đi quan trọng trong
+                        việc tổ chức và củng cố chính quyền độc lập
+                        của người Việt.
+                    </p>
+                    <div class="y-nghia">
+                        <strong>Ý nghĩa:</strong> Khẳng định thành quả
+                        giành quyền tự chủ và vai trò lãnh đạo của
+                        Ngô Quyền.
+                    </div>
+                </div>
+            </article>
+
+            <article class="the">
+                <div class="the-dau">
+                    <span class="so">05</span>
+                    <h3>Chọn Cổ Loa làm kinh đô</h3>
+                </div>
+                <div class="the-noi-dung">
+                    <p>
+                        Ngô Quyền chọn Cổ Loa làm kinh đô. Đây là vùng
+                        đất từng gắn với nhà nước Âu Lạc, có vị trí
+                        và truyền thống lịch sử quan trọng.
+                    </p>
+                    <div class="y-nghia">
+                        <strong>Ý nghĩa:</strong> Gắn việc xây dựng
+                        chính quyền mới với truyền thống lịch sử
+                        lâu đời của dân tộc.
+                    </div>
+                </div>
+            </article>
+
+            <article class="the">
+                <div class="the-dau">
+                    <span class="so">06</span>
+                    <h3>Đặt nền tảng cho thời kì độc lập</h3>
+                </div>
+                <div class="the-noi-dung">
+                    <p>
+                        Chiến thắng Bạch Đằng cùng việc xây dựng
+                        chính quyền sau đó đã tạo nền tảng quan trọng
+                        cho các triều đại Việt Nam tiếp tục củng cố
+                        nền độc lập trong những thế kỉ tiếp theo.
+                    </p>
+                    <div class="y-nghia">
+                        <strong>Ý nghĩa:</strong> Để lại dấu ấn sâu
+                        sắc trong lịch sử dựng nước và giữ nước.
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <section class="diem-nhan">
+        <span class="nhan">Thành tựu nổi bật nhất</span>
+        <h2>Chiến thắng Bạch Đằng năm 938</h2>
+        <p>
+            Chiến thắng này không chỉ đánh bại quân Nam Hán mà còn
+            mở ra bước ngoặt quyết định trong lịch sử dân tộc.
+            Việc Ngô Quyền xưng vương năm 939 tiếp tục khẳng định
+            nền tự chủ và mở đầu quá trình xây dựng chính quyền
+            độc lập do người Việt đứng đầu.
+        </p>
+    </section>
+
+    <section class="bai-hoc">
+        <h2>Bài học từ những thành tựu</h2>
+        <ul>
+            <li>
+                <strong>Chủ động:</strong> Chuẩn bị kĩ lưỡng trước
+                khó khăn và thử thách.
+            </li>
+            <li>
+                <strong>Sáng tạo:</strong> Biết vận dụng điều kiện
+                thực tế để giải quyết vấn đề.
+            </li>
+            <li>
+                <strong>Đoàn kết:</strong> Phát huy sức mạnh tập thể
+                để đạt mục tiêu chung.
+            </li>
+            <li>
+                <strong>Nắm bắt thời cơ:</strong> Lựa chọn thời điểm
+                phù hợp để hành động.
+            </li>
+            <li>
+                <strong>Trách nhiệm:</strong> Bảo vệ và phát huy
+                những thành quả đã đạt được.
+            </li>
+        </ul>
+    </section>
+
+    <section class="ket-luan">
+        <h2>Kết luận</h2>
+        <p>
+            Ngô Quyền là nhân vật tiêu biểu trong lịch sử Việt Nam.
+            Chiến thắng Bạch Đằng năm 938 và việc xây dựng chính
+            quyền năm 939 là những đóng góp nổi bật của ông.
+            Những thành tựu ấy thể hiện tài năng lãnh đạo, tinh
+            thần tự chủ và ý chí bảo vệ đất nước của dân tộc Việt Nam.
+        </p>
+    </section>
+
+    <!-- Chỉ giữ hai nút chuyển trang -->
+    <nav class="bottom">
+        <a href="hanhtrinh.html">← Trang trước: Hành trình</a>
+        <a href="thuthach.html">Trang tiếp theo: Thử thách →</a>
+    </nav>
+
+</main>
+
+<footer>
+    <p><strong>Website Tin học 12</strong></p>
+    <p>Chủ đề: Những con người làm thay đổi thế giới</p>
+    <p>Nhân vật: Ngô Quyền</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tác động của Ngô Quyền</title>
+<link rel="stylesheet" href="style.css">
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #F5E9C9;
+    color: #3B0D12;
+    font-family: Arial, sans-serif;
+    line-height: 1.8;
+}
+
+.impact-hero {
+    padding: 55px 20px;
+    text-align: center;
+    color: #F5E9C9;
+    background: linear-gradient(135deg, #30080D, #702020, #87302B);
+    border-bottom: 8px solid #D4AE52;
+}
+
+.impact-hero .eyebrow {
+    color: #E8C66A;
+    letter-spacing: 2px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.impact-hero h1 {
+    margin: 8px 0;
+    color: #E8C66A;
+    font-family: Georgia, serif;
+    font-size: clamp(34px, 7vw, 50px);
+}
+
+.impact-hero h2 {
+    margin: 10px 0;
+    color: #FFF0CF;
+    font-family: Georgia, serif;
+    font-size: clamp(21px, 5vw, 30px);
+}
+
+.impact-hero p {
+    max-width: 750px;
+    margin: 12px auto 0;
+}
+
+.impact-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    padding: 20px 12px;
+    background: #3B0D12;
+    border-bottom: 4px solid #D4AE52;
+}
+
+.impact-nav a {
+    color: #F5E9C9;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 9px 13px;
+    border-radius: 25px;
+    transition: 0.2s;
+}
+
+.impact-nav a:hover,
+.impact-nav a.active {
+    background: #D4AE52;
+    color: #3B0D12;
+}
+
+.impact-container {
+    width: 92%;
+    max-width: 1000px;
+    margin: 32px auto;
+}
+
+.intro-box,
+.impact-card,
+.timeline-box,
+.analysis-box,
+.reflection-box {
+    background: #FFF9E9;
+    border: 1px solid #D9BD78;
+    border-radius: 15px;
+    padding: 22px;
+    margin-bottom: 25px;
+    box-shadow: 0 5px 15px rgba(59, 13, 18, 0.08);
+}
+
+.section-title {
+    color: #702020;
+    font-family: Georgia, serif;
+    font-size: 24px;
+    line-height: 1.5;
+    margin: 0 0 17px;
+    padding-left: 13px;
+    border-left: 5px solid #D4AE52;
+}
+
+p {
+    text-align: justify;
+    margin: 0 0 13px;
+}
+
+.impact-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.impact-card {
+    padding: 0;
+    overflow: hidden;
+    margin: 0;
+    border: 1px solid #D4AE52;
+    border-radius: 14px;
+}
+
+.card-heading {
+    padding: 18px 18px 8px;
+    background: #FFF1D2;
+    border-bottom: 2px solid #D4AE52;
+}
+
+.card-heading h3 {
+    color: #702020;
+    margin: 0;
+    font-family: Georgia, serif;
+    font-size: 20px;
+}
+
+.card-number {
+    margin-right: 6px;
+    color: #A47724;
+}
+
+.impact-image {
+    margin: 14px 15px;
+    padding: 8px;
+    background: #F5E9C9;
+    border: 1px solid #D4AE52;
+    border-radius: 10px;
+}
+
+.impact-image img {
+    display: block;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 7px;
+}
+
+.impact-image figcaption {
+    margin-top: 9px;
+    padding: 10px 12px;
+    color: #54251B;
+    background: #F7E6B8;
+    border-left: 4px solid #B88A32;
+    border-radius: 5px;
+    font-size: 13px;
+    font-style: italic;
+    line-height: 1.6;
+    text-align: left;
+}
+
+.card-content {
+    padding: 0 18px 20px;
+}
+
+.card-content p {
+    margin-bottom: 0;
+}
+
+/* MỤC 3: CHỈ HIỂN THỊ CHỮ, KHÔNG CÓ ẢNH */
+.timeline-box {
+    background: #FFF9E9;
+}
+
+.timeline-item {
+    margin: 20px 0;
+    padding: 3px 0 3px 18px;
+    border-left: 4px solid #D4AE52;
+}
+
+.timeline-item h3 {
+    margin: 0 0 8px;
+    color: #702020;
+    font-family: Georgia, serif;
+    font-size: 19px;
+}
+
+.timeline-item p {
+    margin-bottom: 0;
+}
+
+.analysis-box {
+    border: 2px solid #D4AE52;
+    background: #FFF6DF;
+}
+
+.analysis-label {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 12px;
+    border-radius: 5px;
+    background: #3B0D12;
+    color: #E8C66A;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.analysis-box h2,
+.reflection-box h2 {
+    color: #702020;
+    font-family: Georgia, serif;
+    margin-top: 0;
+    line-height: 1.5;
+}
+
+.reflection-box {
+    background: #3B0D12;
+    color: #F5E9C9;
+    border: 2px solid #D4AE52;
+}
+
+.reflection-box h2 {
+    color: #E8C66A;
+}
+
+.reflection-box li {
+    margin: 8px 0;
+}
+
+.reflection-box strong {
+    color: #E8C66A;
+}
+
+.bottom-nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin: 25px 0;
+}
+
+.bottom-nav a {
+    display: inline-block;
+    padding: 11px 16px;
+    background: #3B0D12;
+    color: #F5E9C9;
+    border: 1px solid #D4AE52;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+.bottom-nav a:hover {
+    background: #702020;
+    color: #E8C66A;
+}
+
+.impact-footer {
+    padding: 30px 15px;
+    text-align: center;
+    background: #30080D;
+    color: #F5E9C9;
+    border-top: 6px solid #D4AE52;
+}
+
+.impact-footer h3 {
+    color: #E8C66A;
+    font-family: Georgia, serif;
+    margin-top: 0;
+}
+
+.impact-footer p {
+    text-align: center;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+@media (max-width: 650px) {
+    .impact-hero {
+        padding: 40px 18px;
+    }
+
+    .impact-container {
+        width: 94%;
+        margin: 20px auto;
+    }
+
+    .impact-grid {
+        grid-template-columns: 1fr;
+        gap: 17px;
+    }
+
+    .intro-box,
+    .timeline-box,
+    .analysis-box,
+    .reflection-box {
+        padding: 17px;
+    }
+
+    .section-title {
+        font-size: 21px;
+    }
+
+    .bottom-nav {
+        flex-direction: column;
+    }
+
+    .bottom-nav a {
+        text-align: center;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header class="impact-hero">
+    <p class="eyebrow">NHỮNG CON NGƯỜI LÀM THAY ĐỔI THẾ GIỚI</p>
+    <h1>NGÔ QUYỀN</h1>
+    <h2>Tác động đối với lịch sử Việt Nam</h2>
+    <p>
+        Từ chiến thắng Bạch Đằng năm 938 đến bước phát triển của chính quyền tự chủ, Ngô Quyền đã để lại dấu ấn quan trọng trong lịch sử dân tộc.
+    </p>
+</header>
+
+<nav class="impact-nav">
+    <a href="index.html">Trang chủ</a>
+    <a href="cuocdoi.html">Cuộc đời</a>
+    <a href="hanhtrinh.html">Hành trình</a>
+    <a href="thanhtuu.html">Thành tựu</a>
+    <a href="thuthach.html">Thử thách</a>
+    <a href="tacdong.html" class="active">Tác động</a>
+    <a href="disan_baihoc.html">Di sản – Bài học</a>
+    <a href="thuvien_nguon.html">Thư viện – Nguồn</a>
+</nav>
+
+<main class="impact-container">
+
+<section class="intro-box">
+    <h2 class="section-title">1. Khái quát về tác động của Ngô Quyền</h2>
+    <p>
+        Ngô Quyền (898–944) là một nhân vật có vai trò đặc biệt trong lịch sử Việt Nam. Năm 938, ông lãnh đạo quân dân ta đánh bại quân Nam Hán trên sông Bạch Đằng. Chiến thắng này tạo bước ngoặt quan trọng trong quá trình giành lại và củng cố nền độc lập, tự chủ của dân tộc.
+    </p>
+    <p>
+        Năm 939, Ngô Quyền xưng vương và chọn Cổ Loa làm kinh đô. Tác động của ông không chỉ thể hiện ở chính trị và quân sự mà còn ở tinh thần yêu nước, ý chí tự chủ và những bài học lịch sử được truyền lại cho các thế hệ sau.
+    </p>
+</section>
+
+<section>
+    <h2 class="section-title">2. Bốn tác động quan trọng</h2>
+
+    <div class="impact-grid">
+
+        <article class="impact-card">
+            <div class="card-heading">
+                <h3><span class="card-number">01.</span> Tác động chính trị</h3>
+            </div>
+            <figure class="impact-image">
+                <img src="tuong-ngo-quyen.jpeg" alt="Tượng Ngô Quyền" loading="lazy">
+                <figcaption>
+                    Hình 1. Tượng Ngô Quyền, vị anh hùng gắn liền với chiến thắng Bạch Đằng năm 938 và bước phát triển của chính quyền tự chủ.
+                </figcaption>
+            </figure>
+            <div class="card-content">
+                <p>
+                    Chiến thắng năm 938 tạo điều kiện quan trọng để người Việt củng cố quyền tự chủ. Năm 939, Ngô Quyền xưng vương và chọn Cổ Loa làm kinh đô, thể hiện bước chuyển từ chiến thắng quân sự sang xây dựng chính quyền độc lập.
+                </p>
+            </div>
+        </article>
+
+        <article class="impact-card">
+            <div class="card-heading">
+                <h3><span class="card-number">02.</span> Tác động quân sự</h3>
+            </div>
+            <figure class="impact-image">
+                <img src="bai-coc.jpeg" alt="Bãi cọc gắn với nghệ thuật quân sự Bạch Đằng" loading="lazy">
+                <figcaption>
+                    Hình 2. Hình ảnh bãi cọc gợi nhắc cách vận dụng địa hình và thủy triều trong trận Bạch Đằng.
+                </figcaption>
+            </figure>
+            <div class="card-content">
+                <p>
+                    Trận Bạch Đằng cho thấy khả năng nghiên cứu địa hình, tính toán thời cơ và tổ chức trận địa của Ngô Quyền. Cách đánh sáng tạo góp phần tạo nên thắng lợi trước quân Nam Hán, trở thành dấu mốc nổi bật trong lịch sử quân sự Việt Nam.
+                </p>
+            </div>
+        </article>
+
+        <article class="impact-card">
+            <div class="card-heading">
+                <h3><span class="card-number">03.</span> Tác động xã hội</h3>
+            </div>
+            <figure class="impact-image">
+                <img src="tuong-niem.jpeg" alt="Hình ảnh tưởng niệm Ngô Quyền" loading="lazy">
+                <figcaption>
+                    Hình 3. Hoạt động tưởng niệm Ngô Quyền thể hiện sự ghi nhớ công lao của người có đóng góp quan trọng đối với lịch sử dân tộc.
+                </figcaption>
+            </figure>
+            <div class="card-content">
+                <p>
+                    Chiến thắng góp phần củng cố niềm tin vào khả năng tự bảo vệ đất nước của người Việt. Tinh thần đoàn kết, lòng yêu nước và ý chí bảo vệ chủ quyền trở thành những giá trị được nhắc lại qua nhiều thế hệ.
+                </p>
+            </div>
+        </article>
+
+        <article class="impact-card">
+            <div class="card-heading">
+                <h3><span class="card-number">04.</span> Tác động văn hóa</h3>
+            </div>
+            <figure class="impact-image">
+                <img src="di-tich.jpeg" alt="Di tích lịch sử gắn với việc tưởng nhớ Ngô Quyền" loading="lazy">
+                <figcaption>
+                    Hình 4. Di tích lịch sử là nơi lưu giữ dấu ấn quá khứ và góp phần giúp thế hệ trẻ tìm hiểu về Ngô Quyền.
+                </figcaption>
+            </figure>
+            <div class="card-content">
+                <p>
+                    Tên tuổi Ngô Quyền được lưu truyền trong lịch sử, giáo dục và đời sống văn hóa. Câu chuyện về ông giúp thế hệ trẻ hiểu hơn về truyền thống dựng nước, giữ nước và trách nhiệm gìn giữ di sản dân tộc.
+                </p>
+            </div>
+        </article>
+
+    </div>
+</section>
+
+<section class="timeline-box">
+    <h2 class="section-title">3. Từ chiến thắng đến ảnh hưởng lâu dài</h2>
+
+    <div class="timeline-item">
+        <h3>Năm 938 – Chiến thắng Bạch Đằng</h3>
+        <p>
+            Quân Nam Hán bị đánh bại, tạo bước ngoặt quan trọng trong tiến trình khẳng định nền độc lập, tự chủ của người Việt.
+        </p>
+    </div>
+
+    <div class="timeline-item">
+        <h3>Năm 939 – Xây dựng chính quyền tự chủ</h3>
+        <p>
+            Ngô Quyền xưng vương và đóng đô ở Cổ Loa, thể hiện bước phát triển từ thắng lợi quân sự sang xây dựng chính quyền của người Việt.
+        </p>
+    </div>
+
+    <div class="timeline-item">
+        <h3>Các thế hệ sau – Tiếp nối truyền thống</h3>
+        <p>
+            Chiến thắng Bạch Đằng trở thành một dấu mốc quan trọng trong ký ức lịch sử dân tộc. Những chiến thắng trên sông Bạch Đằng về sau cũng làm nổi bật vị trí của dòng sông này trong lịch sử quân sự Việt Nam.
+        </p>
+    </div>
+</section>
+
+<section class="analysis-box">
+    <span class="analysis-label">PHÂN TÍCH LỊCH SỬ</span>
+    <h2>4. Nếu không có Ngô Quyền, lịch sử có thể đã khác như thế nào?</h2>
+
+    <p>
+        Nếu không có Ngô Quyền, lịch sử Việt Nam có thể đã diễn ra theo một hướng khác, dù không thể khẳng định chính xác điều gì sẽ xảy ra. Năm 938, quân Nam Hán tiến vào nước ta trong bối cảnh tình hình chính trị còn bất ổn. Ngô Quyền đã chủ động tổ chức kháng chiến và giành chiến thắng trên sông Bạch Đằng. Nếu thiếu sự lãnh đạo của ông vào thời điểm đó, cuộc kháng chiến có thể gặp nhiều khó khăn hơn, kéo dài hơn hoặc gây ra tổn thất lớn hơn. Tuy nhiên, không thể kết luận rằng người Việt chắc chắn sẽ mất độc lập mãi mãi, bởi lịch sử còn phụ thuộc vào nhiều nhân tố và sự đấu tranh của nhiều thế hệ.
+    </p>
+
+    <p>
+        Đóng góp nổi bật của Ngô Quyền là biết tận dụng địa hình sông Bạch Đằng, thủy triều và sự phối hợp của quân dân để tạo lợi thế trước đối phương. Chiến thắng ấy tạo điều kiện quan trọng để ông xưng vương năm 939 và xây dựng chính quyền tự chủ. Nếu không có bước ngoặt này, quá trình hình thành chính quyền độc lập có thể đã gặp thêm trở ngại hoặc diễn ra vào một thời điểm khác. Điều đó cũng có thể ảnh hưởng đến những lựa chọn chính trị và quân sự của các thế hệ kế tiếp.
+    </p>
+
+    <p>
+        Ở phạm vi rộng hơn, lịch sử và bản sắc của Việt Nam có thể đã phát triển theo một con đường khác. Giá trị của Ngô Quyền không nằm ở việc cho rằng một cá nhân quyết định toàn bộ lịch sử, mà ở chỗ ông đã tạo ra một bước ngoặt có ảnh hưởng sâu rộng. Cần ghi nhận vai trò của ông đồng thời tôn trọng sức mạnh của nhân dân và những điều kiện lịch sử đã góp phần tạo nên chiến thắng.
+    </p>
+</section>
+
+<section class="reflection-box">
+    <h2>5. Nhận xét và bài học rút ra</h2>
+
+    <p>
+        Theo nhóm, tác động lớn nhất của Ngô Quyền là góp phần mở ra bước phát triển mới trong tiến trình độc lập, tự chủ của Việt Nam. Chiến thắng Bạch Đằng không chỉ đánh bại một cuộc xâm lược mà còn tạo cơ hội để người Việt xây dựng chính quyền của mình.
+    </p>
+
+    <ul>
+        <li><strong>Về lịch sử:</strong> Nhận thức được ý nghĩa của độc lập, tự chủ đối với dân tộc.</li>
+        <li><strong>Về quân sự:</strong> Học hỏi tinh thần chủ động, sáng tạo và khả năng tận dụng điều kiện thực tế.</li>
+        <li><strong>Về hiện tại:</strong> Trân trọng hòa bình, gìn giữ di sản và có trách nhiệm với cộng đồng.</li>
+    </ul>
+
+    <p>
+        Thành tựu của một nhân vật lịch sử luôn gắn với sự đóng góp của nhân dân và hoàn cảnh của thời đại. Vì vậy, tìm hiểu Ngô Quyền cũng là cách để chúng ta hiểu rõ hơn sức mạnh đoàn kết của dân tộc Việt Nam.
+    </p>
+</section>
+
+<div class="bottom-nav">
+    <a href="thuthach.html">← Trang trước: Thử thách</a>
+    <a href="disan_baihoc.html">Tiếp theo: Di sản – Bài học →</a>
+</div>
+
+</main>
+
+<footer class="impact-footer">
+    <h3>NGÔ QUYỀN – HÀO KHÍ BẠCH ĐẰNG</h3>
+    <p>Dự án Tin học 12: Những con người làm thay đổi thế giới</p>
+    <p>Nội dung phục vụ mục đích học tập và tìm hiểu lịch sử.</p>
+</footer>
+
+</body>
+</html>

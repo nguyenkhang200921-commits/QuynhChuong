@@ -1,0 +1,554 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ngô Quyền – Người mở nền độc lập tự chủ</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    background: #f5ead5;
+    color: #39251d;
+    line-height: 1.8;
+}
+
+.hero {
+    background: linear-gradient(135deg, #541016, #871f29, #541016);
+    color: #f8e2a0;
+    text-align: center;
+    padding: 38px 18px;
+    border-bottom: 5px solid #c49a47;
+}
+
+.eyebrow {
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.hero h1 {
+    max-width: 900px;
+    margin: 18px auto;
+    font-size: 36px;
+    line-height: 1.4;
+}
+
+.hero p {
+    max-width: 800px;
+    margin: auto;
+    color: #fff0d9;
+    font-size: 17px;
+    text-align: center;
+}
+
+.navbar {
+    background: #351014;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+    padding: 12px 8px;
+}
+
+.navbar a {
+    color: #f8e2a0;
+    text-decoration: none;
+    padding: 9px 11px;
+    border-radius: 6px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.navbar a:hover {
+    background: #7d2028;
+    color: white;
+}
+
+.navbar a.active {
+    background: #c49a47;
+    color: #351014;
+    font-weight: bold;
+}
+
+.container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 16px;
+}
+
+.card {
+    background: #fffaf0;
+    border-radius: 10px;
+    padding: 24px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 12px #00000012;
+}
+
+.intro {
+    border-left: 6px solid #9d2934;
+}
+
+h2 {
+    color: #7b1822;
+    font-size: 27px;
+    line-height: 1.45;
+}
+
+h3 {
+    color: #8a2630;
+    font-size: 21px;
+}
+
+p {
+    text-align: justify;
+    margin: 12px 0;
+}
+
+.section-title {
+    text-align: center;
+    margin: 25px 0;
+}
+
+.section-title h2 {
+    display: inline-block;
+    border-bottom: 3px solid #c49a47;
+    padding-bottom: 8px;
+}
+
+.section-title p {
+    text-align: center;
+}
+
+/* HÌNH ẢNH NHÂN VẬT */
+.portrait {
+    text-align: center;
+    margin: 25px 0;
+}
+
+.portrait img {
+    display: block;
+    width: 100%;
+    max-width: 430px;
+    max-height: 540px;
+    object-fit: contain;
+    margin: 0 auto;
+    border: 5px solid #c49a47;
+    border-radius: 10px;
+    background: #fffaf0;
+    box-shadow: 0 5px 18px #00000020;
+}
+
+.caption {
+    font-size: 14px;
+    color: #70584a;
+    text-align: center;
+    margin-top: 12px;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.info-item {
+    background: #fffaf0;
+    border: 1px solid #e8d7b9;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.info-item h3 {
+    margin-top: 0;
+}
+
+.achievement {
+    background: #fffaf0;
+    border: 1px solid #e8d7b9;
+    border-radius: 10px;
+    padding: 23px;
+    margin-bottom: 25px;
+}
+
+.badge {
+    display: inline-block;
+    background: #c49a47;
+    color: #351014;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.meaning {
+    background: #f8edcf;
+    border-left: 4px solid #c49a47;
+    border-radius: 5px;
+    padding: 13px 16px;
+    margin-top: 15px;
+}
+
+.reason {
+    background: #fff0cf;
+    border: 2px solid #c49a47;
+    border-radius: 10px;
+    padding: 24px;
+    margin-bottom: 25px;
+}
+
+.message {
+    background: #541016;
+    color: #fff2dc;
+    border-radius: 10px;
+    padding: 25px;
+    text-align: center;
+    margin: 30px 0;
+}
+
+.message h2 {
+    color: #f8df9b;
+}
+
+.message p {
+    text-align: center;
+    font-size: 18px;
+}
+
+.explore {
+    text-align: center;
+    margin: 25px 0;
+}
+
+.button {
+    display: inline-block;
+    background: #741821;
+    color: #ffe6a0;
+    text-decoration: none;
+    padding: 10px 16px;
+    margin: 6px;
+    border-radius: 7px;
+    font-weight: bold;
+}
+
+.button:hover {
+    background: #c49a47;
+    color: #351014;
+}
+
+footer {
+    background: #351014;
+    color: #f8e2a0;
+    text-align: center;
+    padding: 22px 14px;
+    border-top: 5px solid #c49a47;
+}
+
+footer p {
+    text-align: center;
+    margin: 5px;
+}
+
+@media (max-width: 600px) {
+    .hero {
+        padding: 28px 15px;
+    }
+
+    .hero h1 {
+        font-size: 27px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .navbar {
+        gap: 5px;
+        padding: 10px 6px;
+    }
+
+    .navbar a {
+        font-size: 12px;
+        padding: 8px 9px;
+    }
+
+    .container {
+        padding: 0 12px;
+        margin-top: 20px;
+    }
+
+    .card,
+    .achievement,
+    .reason,
+    .message {
+        padding: 17px;
+    }
+
+    h2 {
+        font-size: 23px;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .button {
+        display: block;
+        margin: 10px 0;
+    }
+}
+</style>
+</head>
+
+<body id="top">
+
+<header class="hero">
+    <div class="eyebrow">Dự án Tin học 12</div>
+
+    <h1>Ngô Quyền – Người mở nền độc lập tự chủ</h1>
+
+    <p>
+        Khám phá cuộc đời, sự nghiệp và những đóng góp có ý nghĩa
+        lịch sử của người anh hùng dân tộc gắn liền với chiến thắng
+        Bạch Đằng năm 938.
+    </p>
+</header>
+
+<nav class="navbar" aria-label="Menu chính">
+    <a href="index.html" class="active">Trang chủ</a>
+    <a href="cuocdoi.html">Cuộc đời</a>
+    <a href="hanhtrinh.html">Hành trình</a>
+    <a href="thanhtuu.html">Thành tựu</a>
+    <a href="thuthach.html">Thử thách</a>
+    <a href="tacdong.html">Tác động</a>
+    <a href="disan_baihoc.html">Di sản – Bài học</a>
+    <a href="thuvien_nguon.html">Thư viện – Nguồn</a>
+</nav>
+
+<main class="container">
+
+    <section class="card intro">
+        <h2>Giới thiệu về Ngô Quyền</h2>
+
+        <p>
+            Ngô Quyền (khoảng năm 898–944) là một nhân vật tiêu biểu
+            trong lịch sử Việt Nam thế kỉ X. Ông sinh ra ở Đường Lâm,
+            có tài năng và sớm tham gia vào những hoạt động chính trị,
+            quân sự trong thời kì nền tự chủ của người Việt đang được
+            củng cố.
+        </p>
+
+        <p>
+            Năm 938, Ngô Quyền lãnh đạo quân dân đánh bại quân Nam Hán
+            trong trận Bạch Đằng. Ông tận dụng địa hình sông nước và
+            thủy triều để tổ chức trận đánh, tạo nên chiến thắng có ý
+            nghĩa đặc biệt đối với lịch sử dân tộc.
+        </p>
+
+        <p>
+            Năm 939, Ngô Quyền xưng vương và đóng đô ở Cổ Loa, tiếp tục
+            đặt nền móng cho việc xây dựng chính quyền độc lập.
+        </p>
+    </section>
+
+    <!-- PHẦN HÌNH ẢNH NHÂN VẬT -->
+    <section class="card">
+        <div class="section-title">
+            <h2>Hình ảnh nhân vật</h2>
+        </div>
+
+        <div class="portrait">
+            <img
+                src="trang-chu.jpg"
+                alt="Hình minh họa Ngô Quyền"
+                loading="lazy">
+
+            <p class="caption">
+                
+                
+        </div>
+    </section>
+
+    <section>
+        <div class="section-title">
+            <h2>Thông tin nổi bật</h2>
+            <p>Những dấu mốc cơ bản về cuộc đời và sự nghiệp.</p>
+        </div>
+
+        <div class="info-grid">
+            <article class="info-item">
+                <h3>Quê hương</h3>
+                <p>
+                    Ngô Quyền sinh ra ở Đường Lâm, khu vực Sơn Tây
+                    ngày nay, Hà Nội.
+                </p>
+            </article>
+
+            <article class="info-item">
+                <h3>Thời đại</h3>
+                <p>
+                    Ông hoạt động vào thế kỉ X, khi nền tự chủ của
+                    người Việt đứng trước nhiều thử thách.
+                </p>
+            </article>
+
+            <article class="info-item">
+                <h3>Chiến thắng tiêu biểu</h3>
+                <p>
+                    Năm 938, quân dân dưới sự lãnh đạo của Ngô Quyền
+                    đánh bại quân Nam Hán trên sông Bạch Đằng.
+                </p>
+            </article>
+
+            <article class="info-item">
+                <h3>Xây dựng chính quyền</h3>
+                <p>
+                    Năm 939, Ngô Quyền xưng vương và đóng đô ở Cổ Loa.
+                </p>
+            </article>
+        </div>
+    </section>
+
+    <section>
+        <div class="section-title">
+            <h2>Thành tựu nổi bật nhất</h2>
+        </div>
+
+        <article class="achievement">
+            <span class="badge">NĂM 938</span>
+
+            <h3>Chiến thắng Bạch Đằng</h3>
+
+            <p>
+                Ngô Quyền lựa chọn địa hình sông Bạch Đằng và tổ chức
+                trận địa phù hợp, giúp quân ta đánh bại cuộc tiến công
+                của quân Nam Hán.
+            </p>
+
+            <p>
+                Chiến thắng góp phần bảo vệ nền tự chủ của người Việt
+                và tạo điều kiện thuận lợi cho việc xây dựng chính
+                quyền độc lập.
+            </p>
+
+            <div class="meaning">
+                <strong>Giá trị lịch sử:</strong>
+                Chiến thắng Bạch Đằng năm 938 là bước ngoặt quan trọng
+                trong lịch sử dân tộc.
+            </div>
+
+            <div class="explore">
+                <a class="button" href="thanhtuu.html">
+                    Tìm hiểu các thành tựu →
+                </a>
+            </div>
+        </article>
+    </section>
+
+    <section class="reason">
+        <h2>Vì sao chúng tôi lựa chọn Ngô Quyền?</h2>
+
+        <p>
+            Nhóm lựa chọn Ngô Quyền vì ông có đóng góp quan trọng đối
+            với lịch sử Việt Nam. Chiến thắng Bạch Đằng năm 938 thể
+            hiện tinh thần yêu nước, ý chí tự chủ và khả năng vận dụng
+            điều kiện tự nhiên vào nghệ thuật quân sự.
+        </p>
+
+        <p>
+            Tìm hiểu về ông giúp chúng tôi trân trọng nền độc lập và
+            rút ra bài học về tinh thần đoàn kết, sự chủ động và trách
+            nhiệm đối với cộng đồng.
+        </p>
+    </section>
+
+    <section class="message">
+        <h2>Thông điệp của dự án</h2>
+
+        <p>
+            “Hiểu lịch sử để trân trọng hiện tại, học từ quá khứ
+            để xây dựng tương lai.”
+        </p>
+
+        <p>
+            Đây là thông điệp do nhóm thực hiện dự án xây dựng,
+            không phải câu nói được xác nhận là của Ngô Quyền.
+        </p>
+    </section>
+
+    <section>
+        <div class="section-title">
+            <h2>Khám phá câu chuyện Ngô Quyền</h2>
+            <p>Chọn một mục bên dưới để tìm hiểu sâu hơn.</p>
+        </div>
+
+        <div class="info-grid">
+            <article class="info-item">
+                <h3>Cuộc đời</h3>
+                <p>Tìm hiểu quê hương, hoàn cảnh và con đường trưởng thành.</p>
+                <a class="button" href="cuocdoi.html">Khám phá →</a>
+            </article>
+
+            <article class="info-item">
+                <h3>Hành trình</h3>
+                <p>Khám phá những mốc thời gian quan trọng trong cuộc đời ông.</p>
+                <a class="button" href="hanhtrinh.html">Khám phá →</a>
+            </article>
+
+            <article class="info-item">
+                <h3>Thành tựu</h3>
+                <p>Tìm hiểu những đóng góp nổi bật của Ngô Quyền.</p>
+                <a class="button" href="thanhtuu.html">Khám phá →</a>
+            </article>
+
+            <article class="info-item">
+                <h3>Thử thách</h3>
+                <p>Tìm hiểu những khó khăn và cách Ngô Quyền ứng phó.</p>
+                <a class="button" href="thuthach.html">Khám phá →</a>
+            </article>
+
+            <article class="info-item">
+                <h3>Tác động</h3>
+                <p>Phân tích ảnh hưởng của chiến thắng và sự nghiệp của ông.</p>
+                <a class="button" href="tacdong.html">Khám phá →</a>
+            </article>
+
+            <article class="info-item">
+                <h3>Di sản – Bài học</h3>
+                <p>Tìm hiểu những giá trị lịch sử và bài học cho thế hệ trẻ.</p>
+                <a class="button" href="disan_baihoc.html">Khám phá →</a>
+            </article>
+
+            <article class="info-item">
+                <h3>Thư viện – Nguồn</h3>
+                <p>Xem hình ảnh, tư liệu và nguồn tham khảo của dự án.</p>
+                <a class="button" href="thuvien_nguon.html">Khám phá →</a>
+            </article>
+        </div>
+    </section>
+
+    <div class="explore">
+        <a class="button" href="#top">↑ Lên đầu trang</a>
+        <a class="button" href="cuocdoi.html">Bắt đầu tìm hiểu →</a>
+    </div>
+
+</main>
+
+<footer>
+    <p><strong>Chủ đề:</strong> Những con người làm thay đổi thế giới</p>
+    <p><strong>Nhân vật:</strong> Ngô Quyền</p>
+    <p>Website Tin học 12</p>
+</footer>
+
+</body>
+</html>
+

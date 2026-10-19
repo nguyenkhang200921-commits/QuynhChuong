@@ -1,0 +1,712 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Thư viện hình ảnh và nguồn tham khảo | Ngô Quyền</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    background: #f5ead5;
+    color: #39251d;
+    line-height: 1.8;
+}
+
+header {
+    background: linear-gradient(135deg, #541016, #871f29, #541016);
+    color: #f8e2a0;
+    text-align: center;
+    padding: 35px 16px;
+    border-bottom: 5px solid #c49a47;
+}
+
+header .eyebrow {
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+header h1 {
+    font-size: 32px;
+    line-height: 1.4;
+    margin: 12px auto;
+}
+
+header p {
+    max-width: 760px;
+    margin: auto;
+    color: #fff0d9;
+    text-align: center;
+}
+
+nav {
+    background: #351014;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+    padding: 12px 8px;
+}
+
+nav a {
+    color: #f8e2a0;
+    text-decoration: none;
+    padding: 8px 10px;
+    border-radius: 6px;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+}
+
+nav a:hover,
+nav a.active {
+    background: #c49a47;
+    color: #351014;
+}
+
+.container {
+    width: 100%;
+    max-width: 1050px;
+    margin: 28px auto;
+    padding: 0 16px;
+}
+
+.card {
+    background: #fffaf0;
+    border: 1px solid #e8d7b9;
+    border-radius: 12px;
+    padding: 23px;
+    margin-bottom: 25px;
+    box-shadow: 0 5px 16px #0000000c;
+}
+
+.intro {
+    border-left: 6px solid #9d2934;
+}
+
+h2 {
+    color: #7b1822;
+    line-height: 1.5;
+}
+
+h3 {
+    color: #8a2630;
+    line-height: 1.5;
+}
+
+p {
+    text-align: justify;
+    margin: 10px 0;
+}
+
+.section-title {
+    text-align: center;
+    margin: 36px 0 22px;
+}
+
+.section-title h2 {
+    display: inline-block;
+    font-size: 27px;
+    padding-bottom: 7px;
+    border-bottom: 3px solid #c49a47;
+}
+
+.section-title p {
+    text-align: center;
+    color: #70584a;
+    margin-top: 8px;
+}
+
+/* Bốn nhóm hình ảnh */
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.photo-card {
+    background: #fffaf0;
+    border: 1px solid #e5d1a9;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px #00000010;
+    transition: transform 0.2s;
+}
+
+.photo-card:hover {
+    transform: translateY(-3px);
+}
+
+.photo-card img {
+    display: block;
+    width: 100%;
+    height: 235px;
+    object-fit: cover;
+    background: #eadcc2;
+    border-bottom: 4px solid #c49a47;
+}
+
+.photo-card figcaption {
+    padding: 16px;
+}
+
+.photo-card strong {
+    display: block;
+    color: #7b1822;
+    font-size: 18px;
+    margin-bottom: 6px;
+}
+
+.tag {
+    display: inline-block;
+    background: #f0dfb8;
+    color: #5c241c;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    margin-bottom: 8px;
+}
+
+.note {
+    background: #f8edcf;
+    border-left: 4px solid #c49a47;
+    padding: 14px 16px;
+    border-radius: 7px;
+    margin: 20px 0;
+}
+
+.small-note {
+    font-size: 13px;
+    color: #70584a;
+}
+
+.video-box {
+    background: #fffaf0;
+    border: 1px solid #e8d7b9;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.video-frame {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+    background: #eadcc2;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 12px;
+}
+
+.video-frame iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.source-list {
+    padding-left: 23px;
+}
+
+.source-list li {
+    margin: 16px 0;
+    overflow-wrap: anywhere;
+}
+
+.source-list a {
+    color: #7b1822;
+    font-weight: bold;
+}
+
+.source-list a:hover {
+    color: #a77b36;
+}
+
+.table-wrap {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    background: #fffaf0;
+}
+
+th, td {
+    border: 1px solid #d5c19b;
+    padding: 11px;
+    text-align: left;
+    vertical-align: top;
+}
+
+th {
+    background: #ead8b1;
+    color: #54201c;
+}
+
+.final-note {
+    background: #541016;
+    color: #fff2dc;
+    padding: 24px;
+    border-radius: 12px;
+    margin: 28px 0;
+}
+
+.final-note h2 {
+    color: #f8df9b;
+}
+
+.final-note p {
+    text-align: center;
+}
+
+.page-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 30px 0;
+}
+
+.page-nav a {
+    display: inline-block;
+    background: #741821;
+    color: #ffe6a0;
+    text-decoration: none;
+    padding: 11px 15px;
+    border-radius: 7px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+.page-nav a:hover {
+    background: #c49a47;
+    color: #351014;
+}
+
+footer {
+    background: #351014;
+    color: #f8e2a0;
+    text-align: center;
+    padding: 22px 14px;
+    border-top: 5px solid #c49a47;
+}
+
+footer p {
+    text-align: center;
+    margin: 4px 0;
+}
+
+@media (max-width: 600px) {
+    header {
+        padding: 27px 14px;
+    }
+
+    header h1 {
+        font-size: 25px;
+    }
+
+    nav {
+        gap: 4px;
+        padding: 9px 5px;
+    }
+
+    nav a {
+        font-size: 11px;
+        padding: 7px;
+    }
+
+    .container {
+        padding: 0 12px;
+        margin-top: 20px;
+    }
+
+    .card {
+        padding: 17px;
+    }
+
+    .section-title h2 {
+        font-size: 23px;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+        gap: 17px;
+    }
+
+    .photo-card img {
+        height: 230px;
+    }
+
+    .page-nav a {
+        flex: 1;
+        text-align: center;
+    }
+
+    th, td {
+        padding: 8px;
+        font-size: 13px;
+    }
+}
+</style>
+</head>
+
+<body id="top">
+
+<header>
+    <div class="eyebrow">Dự án Tin học 12</div>
+    <h1>Thư viện hình ảnh và nguồn tham khảo</h1>
+    <p>Ngô Quyền – Chiến thắng Bạch Đằng năm 938</p>
+</header>
+
+<nav aria-label="Menu chính">
+    <a href="index.html">Trang chủ</a>
+    <a href="cuocdoi.html">Cuộc đời</a>
+    <a href="hanhtrinh.html">Hành trình</a>
+    <a href="thanhtuu.html">Thành tựu</a>
+    <a href="thuthach.html">Thử thách</a>
+    <a href="tacdong.html">Tác động</a>
+    <a href="disan_baihoc.html">Di sản – Bài học</a>
+    <a href="thuvien_nguon.html" class="active">Thư viện – Nguồn</a>
+</nav>
+
+<main class="container">
+
+    <section class="card intro">
+        <h2>Giới thiệu thư viện</h2>
+        <p>
+            Thư viện tập hợp những hình ảnh tiêu biểu liên quan đến
+            Ngô Quyền, quê hương Đường Lâm, thành Cổ Loa và sông
+            Bạch Đằng. Các tư liệu giúp người đọc hiểu rõ hơn về
+            nhân vật lịch sử và sự kiện có ý nghĩa quan trọng đối
+            với nền độc lập của dân tộc Việt Nam.
+        </p>
+
+        <div class="note">
+            <strong>Lưu ý:</strong> Hình ảnh di tích hiện nay không
+            phải hình ảnh chụp trực tiếp vào thế kỉ X. Nếu sử dụng
+            tranh tái hiện hoặc hình ảnh do AI tạo, cần ghi chú rõ
+            đó là hình minh họa.
+        </div>
+    </section>
+
+    <div class="section-title">
+        <h2>Phần 1. Thư viện hình ảnh</h2>
+        <p>Bốn nhóm hình ảnh chính của dự án</p>
+    </div>
+
+    <!-- NHÓM 1: NGÔ QUYỀN -->
+    <section>
+        <div class="section-title">
+            <h2>1. Hình ảnh Ngô Quyền</h2>
+        </div>
+
+        <div class="gallery">
+            <figure class="photo-card">
+                <img
+                    src="ngo-quyen-danh-giac.jpg"
+                    alt="Hình minh họa Ngô Quyền"
+                    loading="lazy">
+
+                <figcaption>
+                    <span class="tag">Nhân vật lịch sử</span>
+                    <strong>Ngô Quyền</strong>
+                    Hình minh họa nhân vật gắn liền với chiến thắng
+                    Bạch Đằng năm 938 và quá trình xây dựng chính
+                    quyền độc lập.
+                </figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <!-- NHÓM 2: CỔ LOA -->
+    <section>
+        <div class="section-title">
+            <h2>2. Di tích Cổ Loa</h2>
+        </div>
+
+        <div class="gallery">
+            <figure class="photo-card">
+                <img
+                    src="thanh-co-loa.jpg"
+                    alt="Thành Cổ Loa"
+                    loading="lazy">
+
+                <figcaption>
+                    <span class="tag">Di tích lịch sử</span>
+                    <strong>Thành Cổ Loa</strong>
+                    Cổ Loa là nơi Ngô Quyền chọn làm kinh đô sau
+                    khi xưng vương năm 939.
+                </figcaption>
+            </figure>
+
+            <figure class="photo-card">
+                <img
+                    src="di-tich-tai-co-loa.jpg"
+                    alt="Di tích tại Cổ Loa"
+                    loading="lazy">
+
+                <figcaption>
+                    <span class="tag">Không gian di tích</span>
+                    <strong>Di tích tại Cổ Loa</strong>
+                    Hình ảnh giới thiệu một địa điểm thuộc khu di
+                    tích Cổ Loa, góp phần làm rõ giá trị lịch sử
+                    của vùng đất này.
+                </figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <!-- NHÓM 3: ĐƯỜNG LÂM -->
+    <section>
+        <div class="section-title">
+            <h2>3. Quê hương Đường Lâm</h2>
+        </div>
+
+        <div class="gallery">
+            <figure class="photo-card">
+                <img
+                    src="lang-co-duong-lam.jpg"
+                    alt="Làng cổ Đường Lâm"
+                    loading="lazy">
+
+                <figcaption>
+                    <span class="tag">Quê hương</span>
+                    <strong>Làng cổ Đường Lâm</strong>
+                    Đường Lâm, thuộc khu vực Sơn Tây ngày nay,
+                    Hà Nội, là quê hương của Ngô Quyền theo các
+                    tài liệu lịch sử phổ biến.
+                </figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <!-- NHÓM 4: BẠCH ĐẰNG -->
+    <section>
+        <div class="section-title">
+            <h2>4. Sông Bạch Đằng</h2>
+        </div>
+
+        <div class="gallery">
+            <figure class="photo-card">
+                <img
+                    src="song-bach-dang.jpg"
+                    alt="Sông Bạch Đằng"
+                    loading="lazy">
+
+                <figcaption>
+                    <span class="tag">Sự kiện năm 938</span>
+                    <strong>Sông Bạch Đằng</strong>
+                    Năm 938, Ngô Quyền lãnh đạo quân dân đánh bại
+                    quân Nam Hán trên sông Bạch Đằng. Chiến thắng
+                    này là một bước ngoặt quan trọng trong lịch sử
+                    dân tộc.
+                </figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <div class="note small-note">
+        
+    </div>
+
+    <!-- VIDEO -->
+    <div class="section-title">
+        <h2>Phần 2. Video tư liệu</h2>
+        <p>Video giúp tìm hiểu thêm về chiến thắng Bạch Đằng</p>
+    </div>
+
+    <section class="video-box">
+        <h3>Tìm hiểu chiến thắng Bạch Đằng năm 938</h3>
+
+        <p>
+            Bạn có thể sử dụng video lịch sử phù hợp để minh họa
+            cho nội dung dự án. Video bên dưới là khung nhúng mẫu;
+            nếu không phát được, hãy thay bằng đường dẫn video
+            mà bạn đã kiểm tra.
+        </p>
+
+        <div class="video-frame">
+            <iframe
+                src="https://www.youtube-nocookie.com/embed/ARwECqWAFm0"
+                title="Video tìm hiểu chiến thắng Bạch Đằng"
+                loading="lazy"
+                allowfullscreen>
+            </iframe>
+        </div>
+
+        <p class="small-note">
+            Nếu video không phát trên TrebEdit, hãy mở website bằng
+            trình duyệt có kết nối Internet hoặc dùng liên kết
+            YouTube đã được kiểm tra.
+        </p>
+    </section>
+
+    <!-- NGUỒN THAM KHẢO -->
+    <div class="section-title">
+        <h2>Phần 3. Nguồn tham khảo</h2>
+        <p>Ưu tiên nguồn bảo tàng và cơ quan chuyên môn</p>
+    </div>
+
+    <section class="card">
+        <ol class="source-list">
+            <li>
+                <strong>Bảo tàng Lịch sử Quốc gia</strong>
+                <p>
+                    Nguồn tham khảo để tìm hiểu về Ngô Quyền
+                    và chiến thắng Bạch Đằng năm 938.
+                </p>
+                <a
+                    href="https://baotanglichsu.vn/"
+                    target="_blank"
+                    rel="noopener">
+                    Truy cập Bảo tàng Lịch sử Quốc gia
+                </a>
+            </li>
+
+            <li>
+                <strong>Bảo tàng Lịch sử Quân sự Việt Nam</strong>
+                <p>
+                    Tham khảo thêm thông tin về lịch sử quân sự
+                    và các chiến thắng tiêu biểu của dân tộc.
+                </p>
+                <a
+                    href="https://btlsqsvn.mod.gov.vn/"
+                    target="_blank"
+                    rel="noopener">
+                    Truy cập Bảo tàng Lịch sử Quân sự Việt Nam
+                </a>
+            </li>
+
+            <li>
+                <strong>Wikimedia Commons</strong>
+                <p>
+                    Có thể tra cứu hình ảnh về di tích, địa danh
+                    và cảnh quan. Cần kiểm tra chú thích, tác giả
+                    và giấy phép của từng ảnh trước khi sử dụng.
+                </p>
+                <a
+                    href="https://commons.wikimedia.org/"
+                    target="_blank"
+                    rel="noopener">
+                    Truy cập Wikimedia Commons
+                </a>
+            </li>
+
+            <li>
+                <strong>Wikipedia tiếng Việt – Ngô Quyền</strong>
+                <p>
+                    Dùng để tra cứu ban đầu; nên đối chiếu các
+                    sự kiện quan trọng với tài liệu chuyên môn.
+                </p>
+                <a
+                    href="https://vi.wikipedia.org/wiki/Ng%C3%B4_Quy%E1%BB%81n"
+                    target="_blank"
+                    rel="noopener">
+                    Đọc bài Ngô Quyền
+                </a>
+            </li>
+        </ol>
+
+        <div class="note">
+            <strong>
+        </div>
+    </section>
+
+    <!-- PHÂN CÔNG -->
+    <div class="section-title">
+        <h2>Phần 4. Phân công nhiệm vụ</h2>
+    </div>
+
+    <section class="card">
+        <p>
+            Bảng dưới đây là mẫu để nhóm điền tên và công việc
+            thực tế của từng thành viên.
+        </p>
+
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Thành viên</th>
+                        <th>Công việc chính</th>
+                        <th>Công việc hỗ trợ</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Nguyễn Phúc Đăng</td>
+                        <td>
+                            Tìm kiếm, chọn lọc và kiểm tra thông
+                            tin lịch sử; tổng hợp nguồn tham khảo.
+                        </td>
+                        <td>
+                            Kiểm tra chú thích và độ chính xác
+                            của nội dung.
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Lê Quỳnh Chương</td>
+                        <td>
+                            Nhập và chỉnh sửa HTML/CSS; sắp xếp
+                            hình ảnh và hoàn thiện giao diện.
+                        </td>
+                        <td>
+                            Kiểm tra liên kết, thử nghiệm website
+                            trên điện thoại và sửa lỗi hiển thị.
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <p class="small-note">
+           
+        </p>
+    </section>
+
+    <section class="final-note">
+        <h2>Kết luận</h2>
+        <p>
+            Qua hình ảnh và tài liệu tham khảo, chúng ta hiểu rõ
+            hơn về Ngô Quyền, quê hương Đường Lâm, Cổ Loa và
+            chiến thắng Bạch Đằng năm 938. Việc sử dụng tư liệu
+            có nguồn rõ ràng góp phần nâng cao tính chính xác
+            và giá trị của dự án.
+        </p>
+    </section>
+
+    <!-- CHỈ CÓ NÚT TRANG TRƯỚC VÀ TRANG SAU -->
+    <div class="page-nav">
+        <a href="disan_baihoc.html">← Trang trước: Di sản – Bài học</a>
+        <a href="index.html">Về trang chủ ↑</a>
+    </div>
+
+</main>
+
+<footer>
+    <p><strong>Chủ đề:</strong> Những con người làm thay đổi thế giới</p>
+    <p><strong>Nhân vật:</strong> Ngô Quyền</p>
+    <p>Trang 8 – Thư viện hình ảnh và nguồn tham khảo</p>
+</footer>
+
+</body>
+</html>
+

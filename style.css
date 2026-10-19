@@ -1,0 +1,680 @@
+/* ==================================
+   GIAO DIEN WEBSITE NGO QUYEN
+   PHONG CACH GIAY CO - DO DO - VANG
+================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.75;
+    color: #38271e;
+    background:
+        radial-gradient(ellipse at top, rgba(255,255,255,0.8), transparent 65%),
+        linear-gradient(135deg, #f8efd9, #ead7ad, #f5e8c9);
+}
+
+/* PHAN DAU TRANG */
+
+.hero {
+    min-height: 440px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px 20px;
+    color: #fff0cb;
+    background:
+        linear-gradient(rgba(43, 9, 14, 0.84), rgba(70, 14, 21, 0.9)),
+        repeating-linear-gradient(
+            45deg,
+            #56151d,
+            #56151d 20px,
+            #641923 20px,
+            #641923 40px
+        );
+    border-bottom: 6px solid #c9a44c;
+}
+
+.hero-content {
+    max-width: 850px;
+}
+
+.eyebrow {
+    color: #e8c66c;
+    letter-spacing: 4px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.hero h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(42px, 8vw, 76px);
+    line-height: 1.2;
+    margin: 12px 0;
+    color: #f3d582;
+    text-shadow: 2px 3px 8px #1b0507;
+}
+
+.hero h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(20px, 4vw, 30px);
+    margin-bottom: 15px;
+}
+
+.hero-description {
+    max-width: 700px;
+    margin: 0 auto 25px;
+    color: #f6e8c9;
+}
+
+.main-button {
+    display: inline-block;
+    padding: 12px 25px;
+    color: #391015;
+    background: linear-gradient(135deg, #f1d98e, #c69b3e);
+    border-radius: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.main-button:hover {
+    transform: translateY(-3px);
+    background: #fff0b8;
+}
+
+/* THANH MENU */
+
+.navbar {
+    background: #351014;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6px;
+    padding: 13px 10px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 12px rgba(40, 10, 10, 0.18);
+}
+
+.navbar a {
+    color: #f8e9c4;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    transition: 0.25s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    background: #c9a44c;
+    color: #351014;
+}
+
+/* KHUNG NOI DUNG */
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 30px 22px;
+}
+
+section {
+    margin-bottom: 55px;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.small-title {
+    color: #9b752a;
+    letter-spacing: 3px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.section-heading h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    color: #701a23;
+    font-size: clamp(25px, 4vw, 34px);
+    line-height: 1.35;
+    margin: 8px 0 14px;
+}
+
+.gold-line {
+    width: 75px;height: 4px;
+    background: linear-gradient(90deg, #8c2029, #e4c15f);
+    border-radius: 5px;
+    margin: auto;
+}
+
+/* GIOI THIEU NHAN VAT */
+
+.intro-grid {
+    display: grid;
+    grid-template-columns: minmax(230px, 0.8fr) 1.5fr;
+    gap: 30px;
+    align-items: start;
+}
+
+.portrait {
+    padding: 13px;
+    background: #fff9e9;
+    border: 2px solid #c9a44c;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(66, 36, 15, 0.13);
+    text-align: center;
+}
+
+.portrait img {
+    display: block;
+    width: 100%;
+    max-height: 390px;
+    object-fit: cover;
+    border-radius: 9px;
+}
+
+.image-fallback {
+    display: none;
+    min-height: 280px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: #f4d47b;
+    background: linear-gradient(145deg, #481018, #8a2930);
+    border-radius: 9px;
+    font-family: Georgia, serif;
+    font-size: 25px;
+}
+
+.image-fallback small {
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+}
+
+.image-caption {
+    color: #795522;
+    font-size: 13px;
+    font-style: italic;
+    padding-top: 10px;
+}
+
+.intro-text {
+    background: rgba(255, 250, 235, 0.9);
+    border-left: 5px solid #8b252d;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 5px 18px rgba(70, 35, 15, 0.08);
+}
+
+.intro-text h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    color: #741c25;
+    font-size: 23px;
+    margin-bottom: 12px;
+}
+
+.intro-text p {
+    margin-bottom: 13px;
+    text-align: justify;
+}
+
+.info-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.info-tags span {
+    background: #f0dfb7;
+    color: #6d1b23;
+    border: 1px solid #d7b96d;
+    border-radius: 20px;
+    padding: 6px 11px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* THANH TUU */
+
+.achievement-card {
+    display: grid;
+    grid-template-columns: 145px 1fr;
+    align-items: center;
+    gap: 25px;
+    padding: 28px;
+    background: linear-gradient(135deg, #4b1016, #7b2029);
+    color: #fff0cb;
+    border: 3px solid #c9a44c;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(62, 17, 20, 0.17);
+}
+
+.achievement-number {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 45px;
+    font-weight: bold;
+    color: #f3d582;
+    text-align: center;
+    border-right: 2px solid #c9a44c;
+    padding-right: 20px;
+}
+
+.achievement-card h3 {
+    color: #f3d582;
+    font-size: 23px;
+    margin-bottom: 8px;
+}
+
+.text-link {
+    display: inline-block;
+    color: #f3d582;
+    margin-top: 10px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.text-link:hover {
+    text-decoration: underline;
+}
+
+/* LY DO LUA CHON */
+
+.reason-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.reason-card {
+    background: rgba(255, 250, 235, 0.94);
+    border: 1px solid #dec58e;
+    border-top: 4px solid #8b252d;
+    border-radius: 13px;
+    padding: 25px 20px;
+    box-shadow: 0 5px 15px rgba(65, 35, 15, 0.08);transition: 0.3s;
+}
+
+.reason-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 22px rgba(65, 35, 15, 0.14);
+}
+
+.card-icon {
+    font-size: 30px;
+    color: #a77c2d;
+    margin-bottom: 8px;
+}
+
+.reason-card h3 {
+    color: #741c25;
+    margin-bottom: 8px;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+.reason-card p {
+    font-size: 14px;
+}
+
+/* THONG DIEP */
+
+.message-section {
+    text-align: center;
+    padding: 35px 25px;
+    background: rgba(255, 250, 235, 0.86);
+    border: 2px dashed #c9a44c;
+    border-radius: 16px;
+}
+
+.message-symbol {
+    color: #9c762d;
+    font-family: Georgia, serif;
+    font-size: 70px;
+    height: 55px;
+    line-height: 1;
+}
+
+.message-section h2 {
+    color: #741c25;
+    font-family: Georgia, "Times New Roman", serif;
+    margin: 10px 0;
+}
+
+.message-text {
+    max-width: 760px;
+    margin: 0 auto;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 20px;
+    font-style: italic;
+}
+
+.message-note {
+    margin-top: 14px;
+    color: #806b4a;
+    font-size: 12px;
+}
+
+/* CAC TRANG CON */
+
+.explore-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.explore-card {
+    display: block;
+    min-height: 195px;
+    padding: 20px;
+    background: rgba(255, 250, 235, 0.94);
+    border: 1px solid #dfc58e;
+    border-radius: 13px;
+    color: #38271e;
+    text-decoration: none;
+    box-shadow: 0 4px 13px rgba(65, 35, 15, 0.07);
+    transition: 0.3s;
+}
+
+.explore-card:hover {
+    background: #fff9e8;
+    border-color: #9a2630;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 22px rgba(65, 35, 15, 0.13);
+}
+
+.explore-card span {
+    color: #a77c2d;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 27px;
+    font-weight: bold;
+}
+
+.explore-card h3 {
+    color: #741c25;
+    font-size: 16px;
+    margin: 8px 0;
+}
+
+.explore-card p {
+    font-size: 13px;
+}
+
+/* CHAN TRANG */
+
+.footer {
+    text-align: center;
+    padding: 35px 18px;
+    color: #f3e3bd;
+    background: linear-gradient(135deg, #351014, #641923);
+    border-top: 5px solid #c9a44c;
+}
+
+.footer h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    color: #f3d582;
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+.footer p {
+    font-size: 14px;
+}
+
+.footer .copyright {
+    color: #cbb58b;
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+/* TUONG THICH DIEN THOAI */
+
+@media (max-width: 800px) {
+    .intro-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .portrait {
+        max-width: 420px;
+        width: 100%;
+        margin: auto;
+    }
+
+    .portrait img {
+        max-height: 420px;
+        object-fit: contain;
+    }
+
+    .reason-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .explore-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .achievement-card {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .achievement-number {
+        border-right: none;
+        border-bottom: 2px solid #c9a44c;padding: 0 0 12px;
+    }
+
+    .navbar {
+        position: static;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        min-height: 380px;
+        padding: 45px 15px;
+    }
+
+    .eyebrow {
+        letter-spacing: 2px;
+        font-size: 11px;
+    }
+
+    .container {
+        padding: 25px 13px;
+    }
+
+    .intro-text {
+        padding: 18px;
+    }
+
+    .explore-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .explore-card {
+        min-height: auto;
+    }
+
+    .message-text {
+        font-size: 17px;
+    }
+
+    .navbar a {
+        font-size: 12px;
+        padding: 7px 9px;
+    }
+}/* ==================================
+   BO SUNG CHO TRANG CHU INDEX.HTML
+================================== */
+
+/* Nut bam */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    color: #391015;
+    background: linear-gradient(135deg, #f1d98e, #c69b3e);
+    border-radius: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    background: #fff0b8;
+}
+
+/* Mo ta trong phan dau trang */
+.hero p {
+    max-width: 700px;
+    margin: 0 auto 25px;
+    color: #f6e8c9;
+}
+
+/* Khung gioi thieu */
+.intro-section,
+.achievement-section,
+.reason-section,
+.explore-section {
+    max-width: 1100px;
+    margin: 45px auto;
+    padding: 0 22px;
+}
+
+/* Tieu de cac phan */
+.intro-section > h2,
+.achievement-section > h2,
+.reason-section > h2,
+.explore-section > h2 {
+    text-align: center;
+    font-family: Georgia, "Times New Roman", serif;
+    color: #701a23;
+    font-size: clamp(25px, 4vw, 34px);
+    margin-bottom: 25px;
+}
+
+/* Bo cuc gioi thieu */
+.intro-container {
+    display: grid;
+    grid-template-columns: minmax(230px, 0.8fr) 1.5fr;
+    gap: 30px;
+    align-items: start;
+}
+
+/* Anh nhan vat */
+.intro-image {
+    padding: 13px;
+    background: #fff9e9;
+    border: 2px solid #c9a44c;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(66, 36, 15, 0.13);
+    text-align: center;
+}
+
+.intro-image img {
+    display: block;
+    width: 100%;
+    max-height: 390px;
+    object-fit: contain;
+    border-radius: 9px;
+}
+
+/* Thanh tuu */
+.achievement-card {
+    grid-template-columns: 1fr;
+}
+
+.achievement-card .btn {
+    margin-top: 15px;
+}
+
+/* Phan ly do lua chon */
+.reason-content {
+    background: rgba(255, 250, 235, 0.94);
+    border: 1px solid #dec58e;
+    border-top: 4px solid #8b252d;
+    border-radius: 13px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(65, 35, 15, 0.08);
+}
+
+.reason-content p {
+    margin-bottom: 12px;
+    text-align: justify;
+}
+
+.reason-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* Thong diep */
+.message-section blockquote {
+    max-width: 760px;
+    margin: 0 auto;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 20px;
+    font-style: italic;
+    color: #38271e;
+}
+
+/* Mo ta phan kham pha */
+.section-description {
+    text-align: center;
+    margin: -10px 0 25px;
+}
+
+/* Cac the kham pha */
+.explore-card a {
+    display: inline-block;
+    margin-top: 12px;
+    color: #8b252d;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.explore-card a:hover {
+    text-decoration: underline;
+}
+
+/* Tuong thich dien thoai */
+@media (max-width: 800px) {
+    .intro-container {
+        grid-template-columns: 1fr;
+    }
+
+    .intro-image {
+        max-width: 420px;
+        width: 100%;
+        margin: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .intro-section,
+    .achievement-section,
+    .reason-section,
+    .explore-section {
+        padding: 0 13px;
+    }
+
+    .message-section blockquote {
+        font-size: 17px;
+    }
+}

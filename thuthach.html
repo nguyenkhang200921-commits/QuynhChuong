@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Thử thách và khó khăn của Ngô Quyền</title>
+
+    <!-- Su dung CSS chung -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- CSS bo sung rieng cho trang Thu thach -->
+    <style>
+        .challenge-banner {
+            padding: 35px 25px;
+            margin-bottom: 30px;
+            text-align: center;
+            color: #fff0cb;
+            background: linear-gradient(135deg, #4b1016, #7b2029);
+            border: 3px solid #c9a44c;
+            border-radius: 16px;
+            box-shadow: 0 8px 20px rgba(62, 17, 20, 0.15);
+        }
+
+        .challenge-banner h2 {
+            color: #f3d582;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(25px, 4vw, 36px);
+            margin-bottom: 12px;
+        }
+
+        .challenge-banner p {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .challenge-section {
+            padding: 25px;
+            margin-bottom: 25px;
+            background: rgba(255, 250, 235, 0.94);
+            border: 1px solid #dec58e;
+            border-radius: 13px;
+            box-shadow: 0 5px 16px rgba(65, 35, 15, 0.08);
+        }
+
+        .challenge-section h2 {
+            color: #741c25;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 25px;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #dfbd6a;
+        }
+
+        .challenge-section h3 {
+            color: #84242a;
+            margin: 18px 0 8px;
+        }
+
+        .challenge-section p {
+            text-align: justify;
+            margin-bottom: 13px;
+        }
+
+        .challenge-card-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 18px;
+            margin-top: 20px;
+        }
+
+        .challenge-card {
+            padding: 20px;
+            background: #fff7e3;
+            border: 1px solid #dfc58e;
+            border-top: 4px solid #8b252d;
+            border-radius: 10px;
+        }
+
+        .challenge-card .number {
+            display: inline-block;
+            margin-bottom: 8px;
+            color: #9b752a;
+            font-size: 28px;
+            font-family: Georgia, "Times New Roman", serif;
+            font-weight: bold;
+        }
+
+        .challenge-card h3 {
+            margin-top: 0;
+        }
+
+        .challenge-card p {
+            margin-bottom: 0;
+            font-size: 15px;
+        }
+
+        .response-box {
+            padding: 20px;
+            margin: 18px 0;
+            background: #f8edcf;
+            border-left: 5px solid #9b3027;
+            border-radius: 7px;
+        }
+
+        .response-box h3 {
+            margin-top: 0;
+        }
+
+        .response-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        .assessment-box {
+            padding: 25px;
+            color: #fff0cb;
+            background: linear-gradient(135deg, #4b1016, #76202a);
+            border: 2px solid #c9a44c;
+            border-radius: 12px;
+        }
+
+        .assessment-box h3 {
+            color: #f3d582;
+            margin-top: 0;
+        }
+
+        .assessment-box p {
+            text-align: justify;
+        }
+
+        .important-note {
+            padding: 16px 20px;
+            margin-top: 20px;
+            background: #f2dfb0;
+            border-radius: 8px;
+            border-left: 5px solid #b28a37;
+        }
+
+        .important-note p {
+            margin-bottom: 0;
+        }
+
+        .challenge-navigation {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin: 30px 0;
+        }
+
+        .challenge-navigation a {
+            display: inline-block;
+            padding: 11px 18px;
+            color: #fff0cb;
+            background: #641923;
+            border: 1px solid #c9a44c;
+            border-radius: 25px;
+            text-decoration: none;
+            transition: 0.25s;
+        }
+
+        .challenge-navigation a:hover {
+            color: #351014;
+            background: #e8c66f;
+        }
+
+        @media (max-width: 650px) {
+            .challenge-card-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .challenge-section {
+                padding: 18px;
+            }
+
+            .challenge-section h2 {
+                font-size: 22px;
+            }
+
+            .challenge-navigation {
+                flex-direction: column;
+            }
+
+            .challenge-navigation a {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- PHAN DAU TRANG -->
+    <header class="hero">
+        <div class="hero-content">
+
+            <p class="eyebrow">HÀO KHÍ LỊCH SỬ VIỆT NAM</p>
+
+            <h1>NGÔ QUYỀN</h1>
+
+            <h2>Những thử thách và khó khăn</h2>
+
+            <p class="hero-description">
+                Tìm hiểu những trở ngại về chính trị, quân sự
+                và những yêu cầu đặt ra đối với Ngô Quyền
+                trong cuộc đấu tranh bảo vệ nền tự chủ.
+            </p>
+
+        </div>
+    </header>
+
+
+    <!-- MENU CHUNG -->
+    <nav class="navbar">
+
+        <a href="index.html">Trang chủ</a>
+
+        <a href="cuocdoi.html">Cuộc đời</a>
+
+        <a href="hanhtrinh.html">Hành trình</a>
+
+        <a href="thanhtuu.html">Thành tựu</a>
+
+        <a href="thuthach.html" class="active">Thử thách</a>
+
+        <a href="tacdong.html">Tác động</a>
+
+        <a href="disan_baihoc.html">Di sản – Bài học</a>
+
+        <a href="thuvien_nguon.html">Thư viện – Nguồn</a>
+
+    </nav>
+
+
+    <main class="container">
+
+        <!-- BANNER -->
+        <div class="challenge-banner">
+
+            <h2>NHỮNG THỬ THÁCH TRÊN CON ĐƯỜNG GIÀNH QUYỀN TỰ CHỦ</h2>
+
+            <p>
+                Chiến thắng Bạch Đằng năm 938 là kết quả của
+                quá trình chuẩn bị và tổ chức kháng chiến
+                trong hoàn cảnh đất nước còn nhiều khó khăn.
+            </p>
+
+        </div>
+
+
+        <!-- MUC 1 -->
+        <section class="challenge-section">
+
+            <h2>1. Bối cảnh đặt Ngô Quyền trước nhiều thử thách</h2>
+
+            <p>
+                Đầu thế kỉ X, nền tự chủ của người Việt còn
+                chưa vững chắc. Các thế lực bên ngoài vẫn có
+                ý định can thiệp, trong khi tình hình chính trị
+                trong nước có nhiều biến động. Vì vậy, việc
+                bảo vệ quyền tự chủ đòi hỏi người lãnh đạo
+                phải có khả năng đánh giá tình hình và tổ chức
+                lực lượng phù hợp.
+            </p>
+
+            <p>
+                Năm 937, Dương Đình Nghệ bị Kiều Công Tiễn
+                sát hại. Kiều Công Tiễn cầu cứu nhà Nam Hán,
+                tạo điều kiện để quân Nam Hán chuẩn bị tiến
+                sang nước ta. Trước tình thế đó, Ngô Quyền
+                phải giải quyết nguy cơ trong nước và chuẩn bị
+                đối phó với cuộc xâm lược từ bên ngoài.
+            </p>
+
+            <div class="response-box">
+
+                <h3>Thử thách lớn nhất</h3>
+
+                <p>
+                    Ngô Quyền phải tổ chức lực lượng trong
+                    tình hình chính trị bất ổn, đồng thời
+                    chuẩn bị đối phó với quân Nam Hán có ý
+                    định xâm lược nước ta.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- MUC 2 -->
+        <section class="challenge-section">
+
+            <h2>2. Những khó khăn và trở ngại chính</h2>
+
+            <div class="challenge-card-grid">
+
+                <article class="challenge-card">
+
+                    <span class="number">01</span>
+
+                    <h3>Tình hình chính trị bất ổn</h3>
+
+                    <p>
+                        Việc Dương Đình Nghệ bị sát hại làm
+                        tình hình trong nước thêm phức tạp.
+                        Ngô Quyền phải đối diện với nguy cơ
+                        mất ổn định và sự can thiệp của nhà
+                        Nam Hán.
+                    </p>
+
+                </article>
+
+
+                <article class="challenge-card">
+
+                    <span class="number">02</span>
+
+                    <h3>Nguy cơ xâm lược từ nhà Nam Hán</h3>
+
+                    <p>
+                        Quân Nam Hán chuẩn bị tiến vào nước ta.
+                        Đây là mối đe dọa lớn đối với nền tự chủ
+                        còn non trẻ, đặt ra yêu cầu phải có
+                        phương án kháng chiến phù hợp.
+                    </p>
+
+                </article>
+
+
+                <article class="challenge-card">
+
+                    <span class="number">03</span>
+
+                    <h3>Yêu cầu tổ chức lực lượng</h3>
+
+                    <p>
+                        Muốn bảo vệ đất nước, Ngô Quyền cần
+                        tập hợp lực lượng, chuẩn bị chiến đấu
+                        và phối hợp các hoạt động quân sự
+                        trong điều kiện lịch sử lúc bấy giờ.
+                    </p>
+
+                </article>
+
+
+                <article class="challenge-card">
+
+                    <span class="number">04</span>
+
+                    <h3>Lựa chọn phương án chiến đấu</h3>
+
+                    <p>
+                        Đối diện với quân xâm lược, người
+                        chỉ huy cần cân nhắc địa hình, thời cơ
+                        và cách bố trí lực lượng để tăng khả
+                        năng giành thắng lợi.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- MUC 3 -->
+        <section class="challenge-section">
+
+            <h2>3. Ngô Quyền đã đối mặt với thử thách như thế nào?</h2>
+
+            <p>
+                Trước tình hình đó, Ngô Quyền tập hợp lực lượng,
+                tiến đánh Kiều Công Tiễn và chuẩn bị đối phó
+                với quân Nam Hán. Ông lựa chọn sông Bạch Đằng
+                làm nơi quyết chiến, tận dụng đặc điểm địa hình
+                và quy luật thủy triều để xây dựng kế hoạch
+                tác chiến.
+            </p>
+
+            <p>
+                Theo cách trình bày phổ biến trong lịch sử
+                Việt Nam, quân ta bố trí cọc ở khu vực sông
+                Bạch Đằng và lợi dụng thời điểm thủy triều
+                lên xuống để tạo thế trận bất lợi cho đối phương.
+                Kế hoạch này góp phần quan trọng vào chiến thắng
+                năm 938.
+            </p>
+
+            <div class="response-box">
+
+                <h3>Những yếu tố góp phần vượt qua thử thách</h3>
+
+                <p>
+                    <strong>Chủ động:</strong>
+                    Tổ chức lực lượng và chuẩn bị trước khi
+                    đối đầu với quân xâm lược.
+                </p>
+
+                <p>
+                    <strong>Lựa chọn địa hình:</strong>
+                    Tận dụng đặc điểm tự nhiên của sông Bạch Đằng
+                    trong kế hoạch chiến đấu.
+                </p>
+
+                <p>
+                    <strong>Nắm bắt thời cơ:</strong>
+                    Phối hợp cách bố trí trận địa với diễn biến
+                    thủy triều để tạo lợi thế cho quân ta.
+                </p>
+
+                <p>
+                    <strong>Phát huy sức mạnh tập thể:</strong>
+                    Tổ chức và phối hợp lực lượng trong cuộc
+                    kháng chiến bảo vệ đất nước.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- MUC 4 -->
+        <section class="challenge-section">
+
+            <h2>4. Kết quả sau khi vượt qua thử thách</h2>
+
+            <p>
+                Năm 938, Ngô Quyền lãnh đạo quân dân ta đánh
+                bại quân Nam Hán trên sông Bạch Đằng. Chiến thắng
+                này làm thất bại ý đồ xâm lược của nhà Nam Hán
+                và tạo điều kiện quan trọng để củng cố nền
+                tự chủ của người Việt.
+            </p>
+
+            <p>
+                Năm 939, Ngô Quyền xưng vương và đóng đô ở
+                Cổ Loa. Đây là bước phát triển quan trọng
+                trong quá trình xây dựng chính quyền tự chủ
+                sau chiến thắng.
+            </p>
+
+            <div class="important-note">
+
+                <p>
+                    <strong>Ý nghĩa:</strong>
+                    Những khó khăn đã được giải quyết bằng
+                    việc tổ chức kháng chiến và giành thắng lợi,
+                    mở ra bước phát triển mới trong lịch sử
+                    dân tộc.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- MUC 5 -->
+        <section class="challenge-section">
+
+            <h2>5. Nhận xét và đánh giá của nhóm</h2>
+
+            <div class="assessment-box">
+
+                <h3>Góc nhìn của nhóm</h3>
+
+                <p>
+                    Theo nhóm, thử thách lớn nhất của Ngô Quyền
+                    không chỉ là đối đầu với quân Nam Hán mà còn
+                    là bảo vệ nền tự chủ trong lúc tình hình
+                    chính trị trong nước bất ổn. Ông đã thể hiện
+                    khả năng tổ chức lực lượng, lựa chọn địa hình
+                    và tận dụng thời cơ để giành chiến thắng
+                    trên sông Bạch Đằng năm 938.
+                </p>
+
+                <p>
+                    Qua sự kiện này, nhóm nhận thấy rằng để
+                    vượt qua khó khăn cần có sự chuẩn bị,
+                    khả năng phân tích tình hình và tinh thần
+                    đoàn kết. Tuy nhiên, khi đánh giá nhân vật
+                    lịch sử, cần dựa vào tư liệu đáng tin cậy
+                    và tránh khẳng định những chi tiết mà
+                    sử liệu chưa ghi chép rõ.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- MUC 6 -->
+        <section class="challenge-section">
+
+            <h2>6. Bài học rút ra</h2>
+
+            <p>
+                Từ hành trình của Ngô Quyền, chúng ta có thể
+                rút ra một số bài học có giá trị đến ngày nay:
+            </p>
+
+            <ul>
+                <li>
+                    Cần bình tĩnh đánh giá tình hình trước
+                    khi đưa ra quyết định.
+                </li>
+
+                <li>
+                    Sự chuẩn bị chu đáo giúp tăng khả năng
+                    vượt qua khó khăn.
+                </li>
+
+                <li>
+                    Biết tận dụng điều kiện và nguồn lực
+                    sẵn có để giải quyết vấn đề.
+                </li>
+
+                <li>
+                    Đoàn kết và phối hợp là yếu tố quan trọng
+                    khi thực hiện mục tiêu chung.
+                </li>
+
+                <li>
+                    Khi tìm hiểu lịch sử, cần tôn trọng sự thật
+                    và dựa trên nguồn thông tin đáng tin cậy.
+                </li>
+            </ul>
+
+        </section>
+
+
+        <!-- NGUON THAM KHAO -->
+        <section class="challenge-section">
+
+            <h2>7. Nguồn tham khảo</h2>
+
+            <p>
+                Các nguồn dưới đây dùng để kiểm tra thêm
+                thông tin về Ngô Quyền và chiến thắng
+                Bạch Đằng năm 938.
+            </p>
+
+            <ol>
+                <li>
+                    <a
+                        href="https://baotanglichsu.vn/"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        Bảo tàng Lịch sử Quốc gia Việt Nam
+                    </a>
+                </li>
+
+                <li>
+                    <a
+                        href="https://www.britannica.com/"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        Encyclopaedia Britannica
+                    </a>
+                </li>
+            </ol>
+
+            <div class="important-note">
+
+                <p>
+                  
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- DIEU HUONG -->
+        <div class="challenge-navigation">
+
+            <a href="thanhtuu.html">
+                ← Trang trước: Thành tựu
+            </a>
+
+            <a href="tacdong.html">
+                Tiếp theo: Tác động →
+            </a>
+
+        </div>
+
+    </main>
+
+
+    <!-- CHAN TRANG -->
+    <footer class="footer">
+
+        <h2>NGÔ QUYỀN – HÀO KHÍ BẠCH ĐẰNG</h2>
+
+        <p>
+            Dự án Tin học 12:
+            <strong>Những con người làm thay đổi thế giới</strong>
+        </p>
+
+        <p>Trang: Thử thách và khó khăn</p>
+
+        <p class="copyright">
+            Nội dung phục vụ mục đích học tập.
+            Hãy đối chiếu thông tin với các tài liệu lịch sử
+            đáng tin cậy trước khi nộp dự án.
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
